@@ -27,6 +27,6 @@ VALUES ('$name','$father_name','$cnic','$mobile	','$address','$plot_no','$price'
 if($add_customer_query){
     header("Location:add-customer.php");
 }
-// echo mysqli_error($cn);
+ echo mysqli_error($cn);
 }
 ?>
