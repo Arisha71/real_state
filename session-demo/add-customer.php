@@ -11,11 +11,7 @@
 	<div id="main-container">
 		<div class="row">
 			<div class="col-md-1"></div>
-<<<<<<< HEAD
 			<div class="col-lg-10">
-=======
-			<div class="col-md-10">
->>>>>>> 459348f70e745f204e36ce2914d5f26e25e08ce0
 				<div class="panel panel-default">
 					<form action="fir-add-queries.php" method="post">
 						<div class="panel-heading">
