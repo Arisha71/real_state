@@ -104,7 +104,6 @@
 										<th>Installment</th>
 										<th>Advance</th>
 										<th>Remaning</th>
-										<th>Total</th>
 										<th>Status</th>
 										<th>Action</th>
 									</tr>
@@ -129,7 +128,6 @@
 											$installment=$row['installment'];
 											$advane=$row['advacne'];
 											$remaning = $row['remaning'];
-											$total=$row['total'];
 											$status = $row['status'];
 									?>
 											<!-- show data in the rows -->
@@ -145,7 +143,6 @@
 												<td><?php echo $installment; ?></td>
 												<td><?php echo $advane; ?></td>
 												<td><?php echo $remaning; ?></td>
-												<td><?php echo $total; ?></td>
 												<td><?php echo $status; ?></td>
 
 												
