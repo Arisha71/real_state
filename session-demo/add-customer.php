@@ -72,50 +72,44 @@
 											<option value="24 month">24 Month</option>
 											</option>
 										</select>
-								<div class="col-md-6">
-									<div class="form-group">
-										<label class="control-label">Name</label>
-										<input type="text" name="name" placeholder="Your name" class="form-control input-sm" required>
-									</div>
-								</div><!-- /.col -->
-								<div class="col-md-6">
-									<div class="form-group">
-										<label class="control-label">Total Price</label>
-										<input type="number" placeholder="price" id="totalAmount" name="price" class="form-control input-sm">
-									</div>
-								</div><!-- /.col -->
-
-								<div class="col-md-6">
-									<div class="form-group">
-										<label class="control-label">Plot Advance</label>
-										<input type="number" placeholder="plot advance" id="amountPaid" name="advance" class="form-control input-sm">
-									</div>
-								</div><!-- /.col -->
-								<div class="col-md-6">
-									<div class="form-group">
-										<label class="control-label">Remaning Price</label>
-										<!-- <input type="number" name="remaning" placeholder="remainig" id="remainingAmount" class="form-control input-sm" required > -->
-										<p class="text-bold"><span class="form-control" name="remaning" id="remainingAmount">0</span></p>
-									</div>
-								</div><!-- /.col -->
+										</div>
+									</div><!-- /.col -->
+									<div class="col-md-6">
+										<div class="form-group">
+											<label class="control-label">Total Price</label>
+											<input type="number" placeholder="price" id="totalAmount" name="price" class="form-control input-sm">
+										</div>
+									</div><!-- /.col -->
+									<div class="col-md-6">
+										<div class="form-group">
+											<label class="control-label">Plot Advance</label>
+											<input type="number" placeholder="plot advance" id="amountPaid" name="advance" class="form-control input-sm">
+										</div>
+									</div><!-- /.col -->
+									<div class="col-md-6">
+										<div class="form-group">
+											<label class="control-label">Remaning Price</label>
+											<!-- <input type="number" name="remaning" placeholder="remainig" id="remainingAmount" class="form-control input-sm" required > -->
+											<p class="text-bold"><span class="form-control" name="remaning" id="remainingAmount">0</span></p>
+										</div>
+									</div><!-- /.col -->
+								</div>
 							</div>
-						</div>
-						<div class="panel-footer text-right">
-							<button class="btn btn-success" type="add-student" name="add-customer">Add Customer</button>
-							<button class="btn btn-success" type="reset">Clear</button>
-						</div>
+							<div class="panel-footer text-right">
+								<button class="btn btn-success" type="add-student" name="add-customer">Add Customer</button>
+								<button class="btn btn-success" type="reset">Clear</button>
+							</div>
 					</form>
 				</div><!-- /panel -->
 			</div><!-- /.col-->
 		</div><!-- /.row -->
 	</div><!-- /main-container -->
 
-	<?php include("./include/footer.html"); ?>
 </div><!-- /wrapper -->
 <a href="blank.html" id="scroll-to-top" class="hidden-print"><i class="fa fa-chevron-up"></i></a>
+<?php include("./include/footer.html"); ?>
 
 </body>
-
 </html>
 
 <!-- <script src="./maskingCNIC/jquery.min.js"></script> -->
