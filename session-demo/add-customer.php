@@ -59,7 +59,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="control-label">Total Price</label>
-											<input type="number"  placeholder="price"  name="price" class="form-control input-sm">
+											<input type="number"  placeholder="price" id="totalAmount" name="price" class="form-control input-sm">
 										</div>
 									</div><!-- /.col -->
 									<div class="col-md-6">
@@ -80,16 +80,44 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="control-label">Plot Advance</label>
-											<input  type="number" placeholder="plot advance" name="advance" class="form-control input-sm">
+											<input  type="number" placeholder="plot advance" id="plotAdvance" name="advance" class="form-control input-sm">
 										</div>
 									</div><!-- /.col -->
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="control-label">Remaning Price</label>
-											<input type="number" name="remaning" placeholder="remainig" class="form-control input-sm" required >
+											<!-- <input type="number" name="remaning" placeholder="remainig" id="remainingAmount" class="form-control input-sm" required > -->
+											<p>Remaining Amount:<span class="form-control" name="remaning" id="remainingAmount">0.00</span></p>
+
 										</div>
 									</div><!-- /.col -->
 							</div>
+							<br>
+
+  <p>Remaining Amount: $<span id="remainingAmount">0.00</span></p>
+
+  <script>
+    // Function to calculate the remaining amount
+    function calculateRemainingAmount() {
+      const totalAmountInput = document.getElementById('totalAmount');
+      const amountPaidInput = document.getElementById('amountPaid');
+      const remainingAmountSpan = document.getElementById('remainingAmount');
+
+      // Get the values from the input fields
+      const totalAmount = parseFloat(totalAmountInput.value) || 0;
+      const amountPaid = parseFloat(amountPaidInput.value) || 0;
+
+      // Calculate the remaining amount
+      const remainingAmount = totalAmount - amountPaid;
+
+      // Update the display
+      remainingAmountSpan.textContent = remainingAmount.toFixed(2);
+    }
+
+    // Attach event listeners to the input fields
+    document.getElementById('totalAmount').addEventListener('input', calculateRemainingAmount);
+    document.getElementById('amountPaid').addEventListener('input', calculateRemainingAmount);
+  </script>
 							<div class="panel-footer text-right">
 								<button class="btn btn-success" type="add-student" name="add-customer">Add Customer</button>
 								<button class="btn btn-success" type="reset">Clear</button>
