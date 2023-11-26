@@ -65,7 +65,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="control-label">Plot Installment</label>
-											<select name="installment" class="form-control">
+											<select name="installment" class="form-control input-sm">
 												<option value="-1">Choose Installment Plan
 												<option value="3 month">3 Month</option>
 												<option value="6 month">6 Month</option>
