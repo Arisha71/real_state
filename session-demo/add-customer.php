@@ -10,7 +10,9 @@
 	<br><br><br><br>
 	<div id="main-container">
 		<div class="row">
-			<div class="col-md-1"></div>
+			<div class="col-md-1">
+				
+			</div>
 			<div class="col-md-10">
 				<div class="panel panel-default">
 					<form action="fir-add-queries.php" method="post">
