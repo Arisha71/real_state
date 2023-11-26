@@ -58,35 +58,37 @@
 									</div><!-- /.col -->
 									<div class="col-md-6">
 										<div class="form-group">
-											<label class="control-label">Price</label>
+											<label class="control-label">Total Price</label>
 											<input type="number"  placeholder="price"  name="price" class="form-control input-sm">
 										</div>
-									</div><!-- /.col --><div class="col-md-6">
+									</div><!-- /.col -->
+									<div class="col-md-6">
 										<div class="form-group">
-											<label class="control-label">Installment</label>
-											<input type="number" name="installment" placeholder="installment"  class="form-control input-sm" required >
+											<label class="control-label">Plot Installment</label>
+											<select name="installment" class="form-control">
+												<option value="-1">Choose Installment Plan
+												<option value="3 month">3 Month</option>
+												<option value="6 month">6 Month</option>
+												<option value="9 month">9 Month</option>
+												<option value="12 month">12 Month</option>
+												<option value="24 month">24 Month</option>
+												</option>
+											</select>
 										</div>
 									</div><!-- /.col -->
 
 									<div class="col-md-6">
 										<div class="form-group">
-											<label class="control-label">Advance</label>
+											<label class="control-label">Plot Advance</label>
 											<input  type="number" placeholder="plot advance" name="advance" class="form-control input-sm">
 										</div>
 									</div><!-- /.col -->
 									<div class="col-md-6">
 										<div class="form-group">
-											<label class="control-label">Remaning</label>
+											<label class="control-label">Remaning Price</label>
 											<input type="number" name="remaning" placeholder="remainig" class="form-control input-sm" required >
 										</div>
 									</div><!-- /.col -->
-									<div class="col-md-6">
-										<div class="form-group">
-											<label class="control-label">Total</label>
-											<input type="number"  name="total" placeholder="total" class="form-control input-sm">
-										</div>
-									</div><!-- /.col -->
-
 							</div>
 							<div class="panel-footer text-right">
 								<button class="btn btn-success" type="add-student" name="add-customer">Add Customer</button>
