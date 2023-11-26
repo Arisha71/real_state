@@ -72,6 +72,10 @@
 											<option value="24 month">24 Month</option>
 											</option>
 										</select>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="control-label">Name</label>
+										<input type="text" name="name" placeholder="Your name" class="form-control input-sm" required>
 									</div>
 								</div><!-- /.col -->
 								<div class="col-md-6">
