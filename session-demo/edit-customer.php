@@ -123,7 +123,7 @@ else{
 										</div>
 									</div><!-- /.col -->
 							</div>
-							<div class="panel-footer text-right">
+							<div class="panel-footer input-sm text-right">
 								<button class="btn btn-success" type="submit" name="update-customer">update Customer</button>
 								<button class="btn btn-success" type="reset">Clear</button>
 							</div>
