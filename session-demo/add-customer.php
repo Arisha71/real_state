@@ -80,21 +80,20 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="control-label">Plot Advance</label>
-											<input  type="number" placeholder="plot advance" id="plotAdvance" name="advance" class="form-control input-sm">
+											<input  type="number" placeholder="plot advance" id="amountPaid" name="advance" class="form-control input-sm">
 										</div>
 									</div><!-- /.col -->
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="control-label">Remaning Price</label>
 											<!-- <input type="number" name="remaning" placeholder="remainig" id="remainingAmount" class="form-control input-sm" required > -->
-											<p>Remaining Amount:<span class="form-control" name="remaning" id="remainingAmount">0.00</span></p>
+											<p>Remaining Amount:<span class="form-control" name="remaning" id="remainingAmount">0</span></p>
 
 										</div>
 									</div><!-- /.col -->
 							</div>
 							<br>
 
-  <p>Remaining Amount: $<span id="remainingAmount">0.00</span></p>
 
   <script>
     // Function to calculate the remaining amount
