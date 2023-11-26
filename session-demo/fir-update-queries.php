@@ -14,13 +14,12 @@ if(isset($_POST['update-customer'])){
     $installment=$_POST['installment'];
     $advane=$_POST['advance'];
     $remaning = $_POST['remaning'];
-    $total=$_POST['total'];
  
     //create new query method 1.
 
 //create query by metod 2.
 //insert query
-$update_customer_query = mysqli_query($cn,"UPDATE `property_selling` SET `name`='$name',`father_name`='$father_name',`cnic`='$cnic',`mobile`='$mobile',`address`='$address',`plot_no`='$plot_no',`price`='$price',`installment`='$installment',`advacne`='$advane',`remaning`='$remaning',`total`='$total' WHERE
+$update_customer_query = mysqli_query($cn,"UPDATE `property_selling` SET `name`='$name',`father_name`='$father_name',`cnic`='$cnic',`mobile`='$mobile',`address`='$address',`plot_no`='$plot_no',`price`='$price',`installment`='$installment',`advacne`='$advane',`remaning`='$remaning' WHERE
 id='$customer_edit_page_id'");
 if($update_customer_query){
     header("Location:view-customer.php");
