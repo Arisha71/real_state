@@ -89,8 +89,8 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="control-label">Remaning Price</label>
-											<!-- <input type="number" name="remaning" placeholder="remainig" id="remainingAmount" class="form-control input-sm" required > -->
-											<p class="text-bold"><span class="form-control" name="remaning" id="remainingAmount">0</span></p>
+											<input type="number" name="remaning" placeholder="remainig" id="remainingAmount" class="form-control input-sm" required >
+											<!-- <p class="text-bold"><span class="form-control" name="remaning" id="remainingAmount">0</span></p> -->
 										</div>
 									</div><!-- /.col -->
 								</div>
@@ -133,7 +133,7 @@
 		const remainingAmount = totalAmount - amountPaid;
 
 		// Update the display
-		remainingAmountSpan.textContent = remainingAmount.toFixed(2);
+		remainingAmountSpan.textContent = remainingAmount.toFixed(0);
 	}
 
 	// Attach event listeners to the input fields
