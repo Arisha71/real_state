@@ -89,8 +89,8 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="control-label">Remaning Price</label>
-											<!--<input type="number" name="remaning" placeholder="remainig" id="remainingAmount" class="form-control input-sm">-->
-											 <p class="text-bold"><span class="form-control" name="remaning" id="remainingAmount">0</span></p>
+											<input type="number" name="remaning" placeholder="remainig" id="remainingAmount" class="form-control input-sm">
+											 <!-- <p class="text-bold"><span class="form-control" name="remaning" id="remainingAmount">0</span></p> -->
 										</div>
 									</div><!-- /.col -->
 								</div>
