@@ -90,7 +90,7 @@
 										<div class="form-group">
 											<label class="control-label">Remaning Price</label>
 											<!-- <input type="number" name="remaning" placeholder="remainig" id="remainingAmount" class="form-control input-sm" required > -->
-											<p class="text-bold"><span class="form-control" name="remaning" id="remainingAmount">0</span></p>
+											<p class="text-bold"><span class="form-control" name="remaning" id="remainingAmount" oninput="calculateRemainingAmount"></span></p>
 										</div>
 									</div><!-- /.col -->
 								</div>
