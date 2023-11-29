@@ -11,13 +11,13 @@
 <body class="overflow-hidden">
 	<?php include("./include/top-nav.html"); ?>
 
-<br><br><br>
+	<br><br><br>
 	<div id="wrapper" class="preload">
 		<?php include("./include/side-bar.html"); ?>
 		<div id="main-container">
 
-	
-		<!-- <div class="padding-md">
+
+			<!-- <div class="padding-md">
 				<div class="row">
 					<div class="col-md-6">
 						<div class="panel panel-default">
@@ -81,7 +81,7 @@
 					</div>
 				</div> -->
 
-           	<div class="main-container">
+			<div class="main-container">
 				<div class="row">
 					<div class="col-md-1"></div>
 					<div class="col-md-10 panel panel-default table-responsive">
@@ -123,10 +123,10 @@
 											$cnic = $row['cnic'];
 											$mobile = $row['mobile'];
 											$address = $row['address'];
-											$plot_no=$row['plot_no'];
-											$price=$row['price'];
-											$installment=$row['installment'];
-											$advane=$row['advacne'];
+											$plot_no = $row['plot_no'];
+											$price = $row['price'];
+											$installment = $row['installment'];
+											$advane = $row['advacne'];
 											$remaning = $row['remaning'];
 											$status = $row['status'];
 									?>
@@ -145,7 +145,7 @@
 												<td><?php echo $remaning; ?></td>
 												<td><?php echo $status; ?></td>
 
-												
+
 
 												<td>
 													<a href='edit-customer.php?id=<?php echo $id; ?>'><i class="fa fa-edit"></i></a>

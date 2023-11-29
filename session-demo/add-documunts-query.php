@@ -11,11 +11,11 @@ if(isset($_POST['image'])){
     $photo_dir = "upload-file/". $file_name;
 
     move_uploaded_file($file_tmp , $photo_dir);
-    $query = mysqli_query($cn,"INSERT INTO upload_image (image)
-VALUES('$photo')");
+    $query = mysqli_query($cn,"INSERT INTO image_upload (image)
+VALUES('$photo_dir')");
 
 if($query){
-    header("Location:add-customer.php");
+   header("Location:add-customer.php");
 }
 else{
 	echo mysqli_error($cn);	

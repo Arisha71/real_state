@@ -83,14 +83,14 @@
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="control-label">Plot Advance</label>
-											<input type="number" placeholder="plot advance" id="amountPaid" name="advance" class="form-control input-sm">
+											<input type="number" placeholder="plot advance" id="amountPaid" oninput="calculateRemainingAmount" name="advance" class="form-control input-sm">
 										</div>
 									</div><!-- /.col -->
 									<div class="col-md-6">
 										<div class="form-group">
 											<label class="control-label">Remaning Price</label>
 											<!-- <input type="number" name="remaning" placeholder="remainig" id="remainingAmount" class="form-control input-sm" required > -->
-											<p class="text-bold"><span class="form-control" name="remaning" id="remainingAmount" oninput="calculateRemainingAmount"></span></p>
+											<p class="text-bold"><span class="form-control" name="remaning" id="remainingAmount" ></span></p>
 										</div>
 									</div><!-- /.col -->
 								</div>
@@ -133,7 +133,7 @@
 		const remainingAmount = totalAmount - amountPaid;
 
 		// Update the display
-		remainingAmountSpan.textContent = remainingAmount.toFixed(2);
+		remainingAmountSpan.textContent = remainingAmount.toFixed(0);
 	}
 
 	// Attach event listeners to the input fields

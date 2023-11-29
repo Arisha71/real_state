@@ -20,7 +20,7 @@
 						<div class="panel panel-default">
 							<div class="panel-heading">Customer Documunts</div>
 							<div class="panel-body">
-								<form accept="add-documunts-query.php" method="post" enctype="multipart/form-data">
+								<form action="add-documunts-query.php" method="post" enctype="multipart/form-data">
 									<div class="form-group">
 										<label for="exampleInputEmail1">Upload Documunts</label>
 										<input type="file" name="photo" class="form-control input-sm" id="exampleInputEmail1" placeholder="Enter email">
