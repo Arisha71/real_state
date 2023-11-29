@@ -15,7 +15,7 @@ if(isset($_POST['image'])){
 VALUES('$photo_dir')");
 
 if($query){
-   header("Location:add-customer.php");
+   header("Location:add-documunts.php");
 }
 else{
 	echo mysqli_error($cn);	
