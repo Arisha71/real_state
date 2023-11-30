@@ -126,7 +126,7 @@
 											$plot_no = $row['plot_no'];
 											$price = $row['price'];
 											$installment = $row['installment'];
-											$advane = $row['advacne'];
+											$advance = $row['advance'];
 											$remaning = $row['remaning'];
 											$status = $row['status'];
 									?>
@@ -141,7 +141,7 @@
 												<td><?php echo $plot_no; ?></td>
 												<td><?php echo $price; ?></td>
 												<td><?php echo $installment; ?></td>
-												<td><?php echo $advane; ?></td>
+												<td><?php echo $advance; ?></td>
 												<td><?php echo $remaning; ?></td>
 												<td><?php echo $status; ?></td>
 
