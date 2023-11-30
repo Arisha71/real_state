@@ -4,17 +4,15 @@ include ("config.php");
 if(isset($_GET['deleteid'])){
     $id = $_GET['deleteid']; //get data by id and delete it by its id
 
-    $sql =  "DELETE FROM student_information WHERE id=$id";
+    $sql =  "UPDATE `property_selling` SET `status`='0' WHERE `id` = '$id'";
     $result = mysqli_query($cn,$sql);
     //if data found and delete it then go to view-student page
     if($result){
-        header("Location:view-student.php");
+        header("Location:view-customer.php");
     }
     //if data not found and delete then also go to view-student page
     else{
-        header("Location:view-student.php");
-    }
-    
+        header("Location:view-customer.php");
+    }   
 }
-
 ?>
