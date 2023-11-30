@@ -15,73 +15,7 @@
 	<div id="wrapper" class="preload">
 		<?php include("./include/side-bar.html"); ?>
 		<div id="main-container">
-
-
-			<!-- <div class="padding-md">
-				<div class="row">
-					<div class="col-md-6">
-						<div class="panel panel-default">
-							<div class="panel-heading">Simple Form</div>
-							<div class="panel-body">
-								<form>
-									<div class="form-group">
-										<label for="exampleInputEmail1">Email address</label>
-										<input type="email" class="form-control input-sm" id="exampleInputEmail1" placeholder="Enter email">
-									</div>
-									<div class="form-group">
-										<label for="exampleInputPassword1">Password</label>
-										<input type="password" class="form-control input-sm" id="exampleInputPassword1" placeholder="Password">
-									</div>
-									<div class="form-group">
-										<label class="label-checkbox">
-											<input type="checkbox">
-											<span class="custom-checkbox"></span>
-											Remember me
-										</label>
-									</div>
-									<button type="submit" class="btn btn-success btn-sm">Submit</button>
-								</form>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="panel panel-default">
-							<div class="panel-heading">Horizontal Form</div>
-							<div class="panel-body">
-								<form class="form-horizontal">
-									<div class="form-group">
-										<label for="inputEmail1" class="col-lg-2 control-label">Email</label>
-										<div class="col-lg-10">
-											<input type="email" class="form-control input-sm" id="inputEmail1" placeholder="Email">
-										</div>
-									</div>
-									<div class="form-group">
-										<label for="inputPassword1" class="col-lg-2 control-label">Password</label>
-										<div class="col-lg-10">
-											<input type="password" class="form-control input-sm" id="inputPassword1" placeholder="Password">
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="col-lg-offset-2 col-lg-10">
-											<label class="label-checkbox">
-												<input type="checkbox">
-												<span class="custom-checkbox"></span>
-												Remember me
-											</label>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="col-lg-offset-2 col-lg-10">
-											<button type="submit" class="btn btn-success btn-sm">Sign in</button>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div> -->
-
-			<div class="main-container">
+			
 				<div class="row">
 					<div class="col-md-1"></div>
 					<div class="col-md-10 panel panel-default table-responsive">
@@ -162,7 +96,6 @@
 					</div><!-- /panel -->
 				</div>
 				<div class="col-md-1"></div>
-			</div>
 		</div>
 
 

@@ -31,24 +31,51 @@
 						</div><!-- /panel -->
 					</div><!-- /.col -->
 					<div class="col-md-6">
-						<div class="panel panel-default">
-							<div class="panel-heading">View Customer Documents</div>
-							<div class="panel-body">
-								<form class="form-horizontal">
-									<div class="form-group">
-										<label for="inputEmail1" class="col-lg-2 control-label"></label>
-										<div class="col-lg-10">
-											<input type="email" class="form-control input-sm" id="inputEmail1" placeholder="Email">
-										</div><!-- /.col -->
-									</div><!-- /form-group -->
-									<!-- <div class="form-group">
-										<div class="col-lg-offset-2 col-lg-10">
-											<button type="submit" class="btn btn-success btn-sm">Sign in</button>
-										</div>
-									</div> -->
-								</form>
-							</div>
-						</div><!-- /panel -->
+					<div class="row">
+					<div class="col-md-1"></div>
+					<div class="col-md-10 panel panel-default table-responsive">
+						<div class="panel-heading">
+							Customer Data Table
+						</div>
+						<div class="padding-md clearfix">
+							<table class="table table-striped" id="dataTable">
+								<thead>
+									<tr>
+										<th>ID</th>
+										<th>Image</th>
+										<th>Action</th>
+									</tr>
+								</thead>
+								<tbody>
+									<?php
+									include("config.php");
+									$view_students_qry = "SELECT * FROM image_upload";
+									$result = $cn->query($view_students_qry);
+									if ($result->num_rows > 0) {
+										while ($row = $result->fetch_assoc()) {
+
+											// make variables and display in rows
+											$id = $row['id'];
+											$image = $row['image'];
+									?>
+											<!-- show data in the rows -->
+											<tr>
+												<td><?php echo $id; ?></td>
+												<td><img src="<?php echo $image; ?>" height="50px" alt=""></td>
+											<td>
+													<a href='edit-customer.php?id=<?php echo $id; ?>'><i class="fa fa-edit"></i></a>
+													|
+													<a href='delete.php?deleteid=<?php echo $id; ?>'><i class=" fa fa-trash-o"></i></a>
+												</td>
+											</tr>
+									<?php }
+									}  ?>
+
+								</tbody>
+							</table>
+						</div><!-- /.padding-md -->
+					</div><!-- /panel -->
+				</div>
 					</div><!-- /.col -->
 				</div><!-- /.row -->
 			</div>

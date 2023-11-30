@@ -81,7 +81,7 @@
 								<div class="col-md-6">
 									<div class="form-group">
 										<label class="control-label">Plot Advance</label>
-										<input type="number" placeholder="plot advance" id="amountPaid" oninput="calculateRemainingAmount" name="advance" class="form-control input-sm">
+										<input type="number" placeholder="plot advance" id="amountPaid" oninput="calculateRemainingAmount()" name="advance" class="form-control input-sm">
 									</div>
 								</div><!-- /.col -->
 								<div class="col-md-6">
