@@ -111,7 +111,7 @@
 								<tbody>
 									<?php
 									include("config.php");
-									$view_students_qry = "SELECT * FROM property_selling";
+									$view_students_qry = "SELECT * FROM property_selling WHERE status='1'";
 									$result = $cn->query($view_students_qry);
 									if ($result->num_rows > 0) {
 										while ($row = $result->fetch_assoc()) {
