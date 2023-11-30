@@ -6,8 +6,15 @@ if(isset($_POST['image'])){
     $file_name = $_FILES['photo']['name'];
     $file_size =$_FILES['photo']['size'];
     $file_tmp =$_FILES['photo']['tmp_name'];
-    $file_type=$_FILES['photo']['type'];  
-
+    $file_type=$_FILES['photo']['type'];
+    //  file type cjeck
+    if($file_type == ".gif" || $file_type== ".jpg" || $file_type== ".png" || $file_type== ".jpeg") {
+        echo $file_type;
+    } 
+    else {
+    echo "<script>alert('image is out of type')</script>";
+    }
+// folder path 
     $photo_dir = "upload-file/". $file_name;
 
     move_uploaded_file($file_tmp , $photo_dir);

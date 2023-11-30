@@ -35,7 +35,7 @@
 					<div class="col-md-1"></div>
 					<div class="col-md-10 panel panel-default table-responsive">
 						<div class="panel-heading">
-							Customer Data Table
+							Customer Documunts Data Table
 						</div>
 						<div class="padding-md clearfix">
 							<table class="table table-striped" id="dataTable">
