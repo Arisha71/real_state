@@ -141,7 +141,7 @@
 												<td><?php echo $plot_no; ?></td>
 												<td><?php echo $price; ?></td>
 												<td><?php echo $installment; ?></td>
-												<td><?php echo $advane; ?></td>
+												<td><?php echo $advance; ?></td>
 												<td><?php echo $remaning; ?></td>
 												<td><?php echo $status; ?></td>
 
