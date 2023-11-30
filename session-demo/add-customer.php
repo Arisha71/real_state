@@ -11,7 +11,7 @@
 	<div id="main-container">
 		<div class="row">
 			<div class="col-md-1"></div>
-			<div class="col-lg-10">
+			<div class="col-lg-11">
 				<div class="panel panel-default">
 					<form action="fir-add-queries.php" method="post">
 						<div class="panel-heading">
@@ -72,33 +72,33 @@
 											<option value="24 month">24 Month</option>
 											</option>
 										</select>
-										</div>
-									</div><!-- /.col -->
-									<div class="col-md-6">
-										<div class="form-group">
-											<label class="control-label">Total Price</label>
-											<input type="number" placeholder="price" id="totalAmount" name="price" class="form-control input-sm">
-										</div>
-									</div><!-- /.col -->
-									<div class="col-md-6">
-										<div class="form-group">
-											<label class="control-label">Plot Advance</label>
-											<input type="number" placeholder="plot advance" id="amountPaid" oninput="calculateRemainingAmount" name="advance" class="form-control input-sm">
-										</div>
-									</div><!-- /.col -->
-									<div class="col-md-6">
-										<div class="form-group">
-											<label class="control-label">Remaning Price</label>
-											<!-- <input type="number" name="remaning" placeholder="remainig" id="remainingAmount" class="form-control input-sm" required > -->
-											<p class="text-bold"><span class="form-control" name="remaning" id="remainingAmount" ></span></p>
-										</div>
-									</div><!-- /.col -->
-								</div>
+									</div>
+								</div><!-- /.col -->
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="control-label">Total Price</label>
+										<input type="number" placeholder="price" id="totalAmount" name="price" class="form-control input-sm">
+									</div>
+								</div><!-- /.col -->
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="control-label">Plot Advance</label>
+										<input type="number" placeholder="plot advance" id="amountPaid" oninput="calculateRemainingAmount" name="advance" class="form-control input-sm">
+									</div>
+								</div><!-- /.col -->
+								<div class="col-md-6">
+									<div class="form-group">
+										<label class="control-label">Remaning Price</label>
+										<input type="number" name="remaning" id="remainingAmount" class="form-control input-sm">
+										<!-- <p class="text-bold"><span class="form-control" name="remaning" id="remainingAmount" ></span></p> -->
+									</div>
+								</div><!-- /.col -->
 							</div>
-							<div class="panel-footer text-right">
-								<button class="btn btn-success" type="add-student" name="add-customer">Add Customer</button>
-								<button class="btn btn-success" type="reset">Clear</button>
-							</div>
+						</div>
+						<div class="panel-footer text-right">
+							<button class="btn btn-success" type="add-student" name="add-customer">Add Customer</button>
+							<button class="btn btn-success" type="reset">Clear</button>
+						</div>
 					</form>
 				</div><!-- /panel -->
 			</div><!-- /.col-->
@@ -110,6 +110,7 @@
 <?php include("./include/footer.html"); ?>
 
 </body>
+
 </html>
 
 <!-- <script src="./maskingCNIC/jquery.min.js"></script> -->

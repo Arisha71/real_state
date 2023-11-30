@@ -9,8 +9,8 @@ if (isset($_POST['add-customer'])) {
     $mobile = $_POST['mobile'];
     $address = $_POST['address'];
     $plot_no = $_POST['plotno'];
-    $price = $_POST['price'];
     $installment = $_POST['installment'];
+    $price = $_POST['price'];
     $advane = $_POST['advance'];
     $remaning = $_POST['remaning'];
 
@@ -21,8 +21,8 @@ if (isset($_POST['add-customer'])) {
 
     //create query by metod 2.
     //insert query
-    $add_customer_query = mysqli_query($cn, "INSERT INTO `property_selling`( `name`, `father_name`, `cnic`, `mobile`, `address`, `plot_no`, `price`, `installment`, `advacne`, `remaning`, `status`) 
-VALUES ('$name','$father_name','$cnic','$mobile	','$address','$plot_no','$price','$installment','$advane','$remaning','1')");
+    $add_customer_query = mysqli_query($cn, "INSERT INTO `property_selling`( `name`, `father_name`, `cnic`, `mobile`, `address`, `plot_no`, `installment`, `price` `advacne`, `remaning`, `status`) 
+VALUES ('$name','$father_name','$cnic','$mobile	','$address','$plot_no','$installment', '$price' ,'$advane','$remaning','1')");
     if ($add_customer_query) {
         header("Location:add-customer.php");
     }
