@@ -126,7 +126,7 @@
 											$plot_no = $row['plot_no'];
 											$price = $row['price'];
 											$installment = $row['installment'];
-											$advane = $row['advacne'];
+											$advance = $row['advance'];
 											$remaning = $row['remaning'];
 											$status = $row['status'];
 									?>
