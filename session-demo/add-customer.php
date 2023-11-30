@@ -8,14 +8,15 @@
 	<?php include("./include/top-nav.html"); ?>
 	<?php include("./include/side-bar.html"); ?>
 	<div id="main-container">
-		<div class="row">
-			<div class="col-lg-12">
-				<div class="panel panel-default">
-					<form action="fir-add-queries.php" method="post">
-						<div class="panel-heading">
-							Customer data
-						</div>
-						
+		<div class="padding-md">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="panel panel-default">
+						<form action="fir-add-queries.php" method="post">
+							<div class="panel-heading">
+								Customer data
+							</div>
+
 							<div class="panel-body">
 								<div class="row">
 									<div class="col-md-4">
@@ -49,11 +50,11 @@
 										</div>
 									</div><!-- /.col -->
 								</div><!-- /.row -->
-<div>
-								<h4 class="mb-4">Plot Details:</h4>
-								<hr>
+								<div>
+									<h4 class="mb-4">Plot Details:</h4>
+									<hr>
 
-</div>
+								</div>
 
 								<div class="row">
 									<div class="col-md-4">
@@ -106,9 +107,8 @@
 					</div><!-- /panel -->
 				</div> <!--/.col-->
 			</div><!-- row-->
-		</div><!-- padding md-->
-	</div><!-- /main-container -->
-
+	</div><!-- padding md-->
+</div><!-- /main-container -->
 </div><!-- /wrapper -->
 <a href="blank.html" id="scroll-to-top" class="hidden-print"><i class="fa fa-chevron-up"></i></a>
 <?php include("./include/footer.html"); ?>

@@ -16,20 +16,7 @@
 		<div id="main-container">
 			<div class="padding-md">
 				<div class="row">
-					<div class="col-md-6">
-						<div class="panel panel-default">
-							<div class="panel-heading">Upload Customer Documents</div>
-							<div class="panel-body">
-								<form action="add-documunts-query.php" method="post" enctype="multipart/form-data">
-									<div class="form-group">
-										<label for="exampleInputEmail1">Upload Documunts</label>
-										<input type="file" name="photo" class="form-control input-sm" id="exampleInputEmail1" placeholder="Enter email">
-									</div><!-- /form-group -->
-									<button type="submit" name="image" class="btn btn-success btn-sm">Submit</button>
-								</form>
-							</div>
-						</div><!-- /panel -->
-					</div><!-- /.col -->
+					
 					<div class="col-md-6">
 					<div class="row">
 					<div class="col-md-1"></div>
