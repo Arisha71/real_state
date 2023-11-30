@@ -7,11 +7,9 @@
 <div id="wrapper" class="preload">
 	<?php include("./include/top-nav.html"); ?>
 	<?php include("./include/side-bar.html"); ?>
-	<br><br><br><br>
 	<div id="main-container">
 		<div class="row">
-			<div class="col-md-1"></div>
-			<div class="col-lg-11">
+			<div class="col-lg-12">
 				<div class="panel panel-default">
 					<form action="fir-add-queries.php" method="post">
 						<div class="panel-heading">
