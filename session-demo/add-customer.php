@@ -22,13 +22,13 @@
 									<div class="col-md-3">
 										<div class="form-group">
 											<label class="control-label">Name</label>
-											<input type="text" name="name" placeholder="Your name" class="form-control input-sm" required>
+											<input type="text" name="name" id="name" onkeyup="text()" placeholder="Your name" class="form-control input-sm" required>
 										</div>
 									</div><!-- /.col -->
 									<div class="col-md-3">
 										<div class="form-group">
 											<label class="control-label">Father name</label>
-											<input type="text" placeholder="Your fname" name="fname" class="form-control input-sm">
+											<input type="text" placeholder="Your fname" id="fname" onkeyup="text()" name="fname" class="form-control input-sm">
 										</div>
 									</div><!-- /.col -->
 									<div class="col-md-3">
@@ -134,6 +134,7 @@
 		const totalAmount = parseFloat(totalAmountInput.value) || 0;
 		const amountPaid = parseFloat(amountPaidInput.value) || 0;
 
+
 		// Calculate the remaining amount
 		const remainingAmount = totalAmount - amountPaid;
 
@@ -144,4 +145,15 @@
 	// Attach event listeners to the input fields
 	document.getElementById('totalAmount').addEventListener('input', calculateRemainingAmount);
 	document.getElementById('amountPaid').addEventListener('input', calculateRemainingAmount);
+
+	function text(){
+		var name=document.getElementById('name').value;
+		var fname=document.getElementById('fname').value;
+
+		var upperName = name.toUpperCase();
+		var upperFname = fname.toUpperCase();
+		
+		document.getElementById('name').value=upperName;
+		document.getElementById('fname').value=upperFname;
+	}
 </script>
