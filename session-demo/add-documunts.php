@@ -16,7 +16,6 @@
 		<div id="main-container">
 			<div class="padding-md">
 				<div class="row">
-<<<<<<< HEAD
 					<div class="col-md-6">
 						<div class="panel panel-default">
 							<div class="panel-heading">Upload Customer Documents</div>
@@ -31,9 +30,6 @@
 							</div>
 						</div><!-- /panel -->
 					</div><!-- /.col -->
-=======
-					
->>>>>>> fdc653b6a7a2e7145beb68738d8372c7647768e4
 					<div class="col-md-6">
 					<div class="row">
 					<div class="col-md-1"></div>
