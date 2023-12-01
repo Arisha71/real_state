@@ -23,9 +23,9 @@
 								<form action="add-documunts-query.php" method="post" enctype="multipart/form-data">
 									<div class="form-group">
 										<label for="exampleInputEmail1">Upload Documunts</label>
-										<input type="file" name="photo" class="form-control input-sm" id="exampleInputEmail1" placeholder="Enter email">
+										<input type="file" name="photo"  class="form-control input-sm" id="exampleInputEmail1" placeholder="Enter email">
 									</div><!-- /form-group -->
-									<button type="submit" name="image" class="btn btn-success btn-sm">Submit</button>
+									<button type="submit" name="add-image" class="btn btn-success btn-sm">Submit</button>
 								</form>
 							</div>
 						</div><!-- /panel -->
