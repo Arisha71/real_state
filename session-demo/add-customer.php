@@ -19,31 +19,31 @@
 
 							<div class="panel-body">
 								<div class="row">
-									<div class="col-md-4">
+									<div class="col-md-3">
 										<div class="form-group">
 											<label class="control-label">Name</label>
-											<input type="text" name="name" placeholder="Your name" class="form-control input-sm" required>
+											<input type="text" name="name" id="name" onkeyup="text()" placeholder="Your name" class="form-control input-sm" required>
 										</div>
 									</div><!-- /.col -->
-									<div class="col-md-4">
+									<div class="col-md-3">
 										<div class="form-group">
 											<label class="control-label">Father name</label>
-											<input type="text" placeholder="Your fname" name="fname" class="form-control input-sm">
+											<input type="text" placeholder="Your fname" id="fname" onkeyup="text()" name="fname" class="form-control input-sm">
 										</div>
 									</div><!-- /.col -->
-									<div class="col-md-4">
+									<div class="col-md-3">
 										<div class="form-group">
 											<label class="control-label">CNIC</label>
 											<input type="text" name="cnic" data-inputmask="'mask':'99999-9999999-9'" placeholder="xxxxx-xxxxxxx-x" maxlength="15" placeholder="xxxxx-xxxxxxx-x" class="form-control input-sm" required>
 										</div>
 									</div><!-- /.col -->
-									<div class="col-md-4">
+									<div class="col-md-3">
 										<div class="form-group">
 											<label class="control-label"> Mobile</label>
 											<input type="text" data-inputmask="'mask' :'0399-9999999'" placeholder="xxxx-xxxxxxx" type="number" maxlength="12" name="mobile" class="form-control input-sm">
 										</div>
 									</div><!-- /.col -->
-									<div class="col-md-4">
+									<div class="col-md-12">
 										<div class="form-group">
 											<label class="control-label"> Address</label>
 											<input type="text" placeholder="Enter address here..." name="address" class="form-control input-sm">
@@ -142,6 +142,7 @@
 		const totalAmount = parseFloat(totalAmountInput.value) || 0;
 		const amountPaid = parseFloat(amountPaidInput.value) || 0;
 
+
 		// Calculate the remaining amount
 		const remainingAmount = totalAmount - amountPaid;
 
@@ -152,4 +153,15 @@
 	// Attach event listeners to the input fields
 	document.getElementById('totalAmount').addEventListener('input', calculateRemainingAmount);
 	document.getElementById('amountPaid').addEventListener('input', calculateRemainingAmount);
+
+	function text(){
+		var name=document.getElementById('name').value;
+		var fname=document.getElementById('fname').value;
+
+		var upperName = name.toUpperCase();
+		var upperFname = fname.toUpperCase();
+		
+		document.getElementById('name').value=upperName;
+		document.getElementById('fname').value=upperFname;
+	}
 </script>
