@@ -12,7 +12,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="panel panel-default">
-						<form action="fir-add-queries.php" method="post">
+						<form action="fir-add-queries.php" method="post" enctype="multipart/form-data">
 							<div class="panel-heading">
 								Customer data
 							</div>
@@ -98,6 +98,14 @@
 										</div>
 									</div><!-- /.col -->
 								</div>
+								<div class="row">
+									<div class="col-md-8 ">
+										<div class="form-group">
+											<label for="exampleInputEmail1">Upload Documunts</label>
+											<input type="file" name="photo" class="form-control input-sm" id="exampleInputEmail1" placeholder="Enter email">
+										</div>
+									</div>
+								</div>
 							</div>
 							<div class="panel-footer text-right">
 								<button class="btn btn-success" type="add-student" name="add-customer">Add Customer</button>
@@ -107,8 +115,8 @@
 					</div><!-- /panel -->
 				</div> <!--/.col-->
 			</div><!-- row-->
-	</div><!-- padding md-->
-</div><!-- /main-container -->
+		</div><!-- padding md-->
+	</div><!-- /main-container -->
 </div><!-- /wrapper -->
 <a href="blank.html" id="scroll-to-top" class="hidden-print"><i class="fa fa-chevron-up"></i></a>
 <?php include("./include/footer.html"); ?>
