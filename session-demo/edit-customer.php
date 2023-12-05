@@ -91,13 +91,13 @@
 										<!-- <div class="col-md-6">
 											<div class="form-group">
 												<label class="control-label">Start Date</label>
-												<input type="date"  value='<?php echo $start_date; ?>' name="start" class="form-control input-sm" required>
+												<input type="date"  value='<?php // echo $start_date; ?>' name="start" class="form-control input-sm" required>
 											</div>
 										</div>
 										<div class="col-md-6">
 											<div class="form-group">
 												<label class="control-label">End Date</label>
-												<input type="date"  value='<?php echo $end_date; ?>' name="end" class="form-control input-sm" required>
+												<input type="date"  value='<?php // echo $end_date; ?>' name="end" class="form-control input-sm" required>
 											</div>
 										</div> -->
 										<div class="col-md-6">

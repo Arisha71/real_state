@@ -74,8 +74,8 @@
 											<td><?php echo $mobile; ?></td>
 											<td><?php echo $address; ?></td>
 											<td><?php echo $plot_no; ?></td>
-											<!-- <td><?php echo $start_date; ?></td>
-											<td><?php echo $end_date; ?></td> -->
+											<!-- <td><?php //echo $start_date; ?></td>
+											<td><?php // echo $end_date; ?></td> -->
 											<td><?php echo $installment; ?></td>
 											<td><?php echo $price; ?></td>
 											<td><?php echo $advance; ?></td>
