@@ -33,7 +33,7 @@ if (isset($_POST['add-customer'])) {
         $add_customer_query = mysqli_query($cn, "INSERT INTO `property_selling`(`name`, `father_name`,`cnic`,`mobile`,`address`,`plot_no`,`installment`,`price`, `advance`,`remaning`,`image`,`status`) 
          VALUES ('$name','$father_name','$cnic','$mobile','$address','$plot_no', 
          '$installment','$price','$advance','$remaning','$photo_dir','1')");
-          echo "<script>alert('pdf file type is uploaded.....')
+        echo "<script>alert('pdf file type is uploaded.....')
           window.location.href='add-customer.php'
           </script> ";
     } else {
@@ -44,4 +44,3 @@ if (isset($_POST['add-customer'])) {
 
     }
 }
-?>
