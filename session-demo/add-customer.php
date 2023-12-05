@@ -60,19 +60,19 @@
 											<label class="control-label">Plot #</label>
 											<input type="number" placeholder="plot no" name="plotno" class="form-control input-sm" required>
 										</div>
-									</div><!-- /.col -->
-									<div class="col-md-4">
+									</div>
+									<!-- <div class="col-md-4">
 										<div class="form-group">
 											<label class="control-label">Plan Start </label>
 											<input type="date" placeholder="start" name="start" class="form-control input-sm" required>
 										</div>
-									</div><!-- /.col -->
+									</div>
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="control-label">Plan End</label>
 											<input type="date" placeholder="end" name="end" class="form-control input-sm" required>
 										</div>
-									</div><!-- /.col -->
+									</div> -->
 
 									<div class="col-md-4">
 										<div class="form-group">

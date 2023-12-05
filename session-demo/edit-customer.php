@@ -88,18 +88,18 @@
 												<input type="number"  value='<?php echo $plot_no; ?>' name="plotno" class="form-control input-sm" required>
 											</div>
 										</div><!-- /.col -->
-										<div class="col-md-6">
+										<!-- <div class="col-md-6">
 											<div class="form-group">
 												<label class="control-label">Start Date</label>
 												<input type="date"  value='<?php echo $start_date; ?>' name="start" class="form-control input-sm" required>
 											</div>
-										</div><!-- /.col -->
+										</div>
 										<div class="col-md-6">
 											<div class="form-group">
 												<label class="control-label">End Date</label>
 												<input type="date"  value='<?php echo $end_date; ?>' name="end" class="form-control input-sm" required>
 											</div>
-										</div><!-- /.col -->
+										</div> -->
 										<div class="col-md-6">
 											<div class="form-group">
 												<label class="control-label">Plot Installment</label>

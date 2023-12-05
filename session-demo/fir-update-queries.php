@@ -10,8 +10,8 @@ if(isset($_POST['update-customer'])){
     $mobile=$_POST['mobile'];
     $address=$_POST['address'];
     $plot_no=$_POST['plotno'];
-    $start_date=$_POST['start'];
-    $end_date=$_POST['end'];
+    // $start_date=$_POST['start'];
+    // $end_date=$_POST['end'];
     $price=$_POST['price'];
     $installment=$_POST['installment'];
     $advane=$_POST['advance'];
@@ -21,7 +21,7 @@ if(isset($_POST['update-customer'])){
 
 //create query by metod 2.
 //insert query
-$update_customer_query = mysqli_query($cn,"UPDATE `property_selling` SET `name`='$name',`father_name`='$father_name',`cnic`='$cnic',`mobile`='$mobile',`address`='$address',`plot_no`='$plot_no',`start_date`='$start_date',`end_date`='$end_date', `price`='$price',`installment`='$installment',`advance`='$advane',`remaning`='$remaning' WHERE
+$update_customer_query = mysqli_query($cn,"UPDATE `property_selling` SET `name`='$name',`father_name`='$father_name',`cnic`='$cnic',`mobile`='$mobile',`address`='$address',`plot_no`='$plot_no',`price`='$price',`installment`='$installment',`advance`='$advane',`remaning`='$remaning' WHERE
 id='$customer_edit_page_id'");
 if($update_customer_query){
     header("Location:view-customer.php");
