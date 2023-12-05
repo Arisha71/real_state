@@ -28,8 +28,10 @@
 				$mobile = $rows['mobile'];
 				$address = $rows['address'];
 				$plot_no = $rows['plot_no'];
-				$price = $rows['price'];
+				$start_date = $rows['start_date'];
+				$end_date = $rows['end_date'];
 				$installment = $rows['installment'];
+				$price = $rows['price'];
 				$advane = $rows['advacne'];
 				$remaning = $rows['remaning'];
 				$status = $rows['status'];
@@ -83,7 +85,19 @@
 										<div class="col-md-6">
 											<div class="form-group">
 												<label class="control-label">Plot #</label>
-												<input type="number" placeholder="plot no" value='<?php echo $plot_no; ?>' name="plotno" class="form-control input-sm" required>
+												<input type="number"  value='<?php echo $plot_no; ?>' name="plotno" class="form-control input-sm" required>
+											</div>
+										</div><!-- /.col -->
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="control-label">Start Date</label>
+												<input type="date"  value='<?php echo $start_date; ?>' name="start" class="form-control input-sm" required>
+											</div>
+										</div><!-- /.col -->
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="control-label">End Date</label>
+												<input type="date"  value='<?php echo $end_date; ?>' name="end" class="form-control input-sm" required>
 											</div>
 										</div><!-- /.col -->
 										<div class="col-md-6">
@@ -103,13 +117,13 @@
 										<div class="col-md-6">
 											<div class="form-group">
 												<label class="control-label">Total Price</label>
-												<input type="number" value='<?php echo $price; ?>' placeholder="price" id="totalAmount" name="price" class="form-control input-sm">
+												<input type="number" value='<?php echo $price; ?>'  id="totalAmount" name="price" class="form-control input-sm">
 											</div>
 										</div><!-- /.col -->
 										<div class="col-md-6">
 											<div class="form-group">
 												<label class="control-label">Plot Advance</label>
-												<input type="number" value='<?php echo $address; ?>' placeholder="plot advance" id="amountPaid" name="advance" class="form-control input-sm">
+												<input type="number" value='<?php echo $address; ?>' id="amountPaid" name="advance" class="form-control input-sm">
 											</div>
 										</div><!-- /.col -->
 										<div class="col-md-6">

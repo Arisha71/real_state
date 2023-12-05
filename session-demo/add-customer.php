@@ -46,21 +46,31 @@
 									<div class="col-md-12">
 										<div class="form-group">
 											<label class="control-label"> Address</label>
-											<input type="text" placeholder="Enter address here..." name="address" class="form-control input-sm">
+											<input type="text" placeholder="Enter address here..." onkeyup="text()" name="address" class="form-control input-sm">
 										</div>
 									</div><!-- /.col -->
 								</div><!-- /.row -->
 								<div>
 									<h4 class="mb-4">Plot Details:</h4>
 									<hr>
-
 								</div>
-
 								<div class="row">
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="control-label">Plot #</label>
 											<input type="number" placeholder="plot no" name="plotno" class="form-control input-sm" required>
+										</div>
+									</div><!-- /.col -->
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="control-label">Plan Start </label>
+											<input type="date" placeholder="start" name="start" class="form-control input-sm" required>
+										</div>
+									</div><!-- /.col -->
+									<div class="col-md-4">
+										<div class="form-group">
+											<label class="control-label">Plan End</label>
+											<input type="date" placeholder="end" name="end" class="form-control input-sm" required>
 										</div>
 									</div><!-- /.col -->
 
@@ -87,7 +97,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="control-label">Plot Advance</label>
-											<input type="number" placeholder="plot advance" id="amountPaid" oninput="calculateRemainingAmount" name="advance" class="form-control input-sm">
+											<input type="number" placeholder="plot advance" id="amountPaid" oninput="remainig()"  name="advance" class="form-control input-sm">
 										</div>
 									</div><!-- /.col -->
 									<div class="col-md-4">
@@ -133,27 +143,17 @@
 
 <script>
 	// Function to calculate the remaining amount
-	function calculateRemainingAmount() {
-		const totalAmountInput = document.getElementById('totalAmount');
-		const amountPaidInput = document.getElementById('amountPaid');
-		const remainingAmountSpan = document.getElementById('remainingAmount');
-
-		// Get the values from the input fields
-		const totalAmount = parseFloat(totalAmountInput.value) || 0;
-		const amountPaid = parseFloat(amountPaidInput.value) || 0;
-
-
-		// Calculate the remaining amount
-		const remainingAmount = totalAmount - amountPaid;
-
-		// Update the display
-		remainingAmountSpan.textContent = remainingAmount.toFixed(0);
+	function remainig() {
+		let totalAmount = document.getElementById('totalAmount').value;
+		  let advance = document.getElementById('amountPaid').value;
+		document.getElementById('remainingAmount').value= (totalAmount-advance);
 	}
-
 	// Attach event listeners to the input fields
-	document.getElementById('totalAmount').addEventListener('input', calculateRemainingAmount);
-	document.getElementById('amountPaid').addEventListener('input', calculateRemainingAmount);
+	document.getElementById('totalAmount').addEventListener('input', remainig);
+	document.getElementById('amountPaid').addEventListener('input', remainig);
 
+
+	// function to write text in uppercase
 	function text(){
 		var name=document.getElementById('name').value;
 		var fname=document.getElementById('fname').value;

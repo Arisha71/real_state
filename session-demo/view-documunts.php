@@ -33,7 +33,7 @@
 								<tbody>
 									<?php
 									include("config.php");
-									$view_qry = "SELECT * FROM property_selling";
+									$view_qry = "SELECT * FROM property_selling WHERE status='1' ";
 									$result = $cn->query($view_qry);
 									if ($result->num_rows > 0) {
 										while ($row = $result->fetch_assoc()) {
@@ -45,7 +45,7 @@
 											<!-- show data in the rows -->
 											<tr>
 												<td><?php echo $id; ?></td>
-												<td><iframe type="pdf" src="upload-file/<?php echo $image; ?>" height="150px" alt=""></iframe></td>
+												<td class="text-center"><iframe type="pdf" src="./upload-file/<?php $image ?>" height="450px" width="550px" alt=""></iframe></td>
 												<td>
 													<a href='edit-customer.php?id=<?php echo $id; ?>'><i class="fa fa-edit"></i></a>
 													|

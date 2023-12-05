@@ -31,8 +31,10 @@
 									<th>Mobile</th>
 									<th>Address</th>
 									<th>Plot No</th>
-									<th>Price</th>
+									<th>Start Date</th>
+									<th>End Date</th>
 									<th>Installment</th>
+									<th>Price</th>
 									<th>Advance</th>
 									<th>Remaning</th>
 									<th>Status</th>
@@ -55,8 +57,10 @@
 										$mobile = $row['mobile'];
 										$address = $row['address'];
 										$plot_no = $row['plot_no'];
-										$price = $row['price'];
+										$start_date = $row['start_date'];
+										$end_date = $row['end_date'];
 										$installment = $row['installment'];
+										$price = $row['price'];
 										$advance = $row['advance'];
 										$remaning = $row['remaning'];
 										$status = $row['status'];
@@ -70,8 +74,10 @@
 											<td><?php echo $mobile; ?></td>
 											<td><?php echo $address; ?></td>
 											<td><?php echo $plot_no; ?></td>
-											<td><?php echo $price; ?></td>
+											<td><?php echo $start_date; ?></td>
+											<td><?php echo $end_date; ?></td>
 											<td><?php echo $installment; ?></td>
+											<td><?php echo $price; ?></td>
 											<td><?php echo $advance; ?></td>
 											<td><?php echo $remaning; ?></td>
 											<td><?php echo $status; ?></td>
