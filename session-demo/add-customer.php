@@ -97,7 +97,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="control-label">Plot Advance</label>
-											<input type="number" placeholder="plot advance" id="amountPaid" oninput="remainig()"  name="advance" class="form-control input-sm">
+											<input type="number" placeholder="plot advance" id="amountPaid" oninput="remainig()" name="advance" class="form-control input-sm">
 										</div>
 									</div><!-- /.col -->
 									<div class="col-md-4">
@@ -107,20 +107,18 @@
 											<!-- <p class="text-bold"><span class="form-control" name="remaning" id="remainingAmount" ></span></p> -->
 										</div>
 									</div><!-- /.col -->
-								</div>
-								<div class="row">
-									<div class="col-md-8 ">
+
+									<div class="col-md-4 ">
 										<div class="form-group">
 											<label for="exampleInputEmail1">Upload Documunts</label>
 											<input type="file" name="photo" class="form-control input-sm" id="exampleInputEmail1" placeholder="Enter email">
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="panel-footer text-right">
-								<button class="btn btn-success" type="add-student" name="add-customer">Add Customer</button>
-								<button class="btn btn-success" type="reset">Clear</button>
-							</div>
+								<div class="panel-footer text-right">
+									<button class="btn btn-success" type="add-student" name="add-customer">Add Customer</button>
+									<button class="btn btn-success" type="reset">Clear</button>
+								</div>
 						</form>
 					</div><!-- /panel -->
 				</div> <!--/.col-->
@@ -145,8 +143,8 @@
 	// Function to calculate the remaining amount
 	function remainig() {
 		let totalAmount = document.getElementById('totalAmount').value;
-		  let advance = document.getElementById('amountPaid').value;
-		document.getElementById('remainingAmount').value= (totalAmount-advance);
+		let advance = document.getElementById('amountPaid').value;
+		document.getElementById('remainingAmount').value = (totalAmount - advance);
 	}
 	// Attach event listeners to the input fields
 	document.getElementById('totalAmount').addEventListener('input', remainig);
@@ -154,14 +152,14 @@
 
 
 	// function to write text in uppercase
-	function text(){
-		var name=document.getElementById('name').value;
-		var fname=document.getElementById('fname').value;
+	function text() {
+		var name = document.getElementById('name').value;
+		var fname = document.getElementById('fname').value;
 
 		var upperName = name.toUpperCase();
 		var upperFname = fname.toUpperCase();
-		
-		document.getElementById('name').value=upperName;
-		document.getElementById('fname').value=upperFname;
+
+		document.getElementById('name').value = upperName;
+		document.getElementById('fname').value = upperFname;
 	}
 </script>
