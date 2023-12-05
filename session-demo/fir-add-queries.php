@@ -26,8 +26,8 @@ if (isset($_POST['add-customer'])) {
 
     // folder path  
     $photo_dir = "upload-file/" . $file_name;
-    // echo "<script>alert('file path is uploaded')</script> ";
 
+<<<<<<< Updated upstream
     if ($file_extension == 'pdf') {
         move_uploaded_file($file_tmp, $photo_dir);
         $add_customer_query = mysqli_query($cn, "INSERT INTO `property_selling`(`name`, `father_name`,`cnic`,`mobile`,`address`,`plot_no`,`installment`,`price`, `advance`,`remaning`,`image`,`status`) 
@@ -41,6 +41,23 @@ if (isset($_POST['add-customer'])) {
         window.location.href='add-customer.php'
         </script> ";
         //echo mysqli_error($cn);
+=======
+    // if ($file_extension == 'pdf') {
+    //     move_uploaded_file($file_tmp, $photo_dir);
+>>>>>>> Stashed changes
 
-    }
+    //     $add_customer_query = mysqli_query($cn, "INSERT INTO `property_selling`(`name`, `father_name`,`cnic`,`mobile`,`address`,`plot_no`,`installment`,`price`, `advance`,`remaning`,`image`,`status`) 
+    //      VALUES ('$name','$father_name','$cnic','$mobile','$address','$plot_no','$installment','$price','$advance','$remaning','$photo_dir','1')");
+    //     //   echo "<script>alert('pdf file type is uploaded.....')
+    //     //   window.location.href='add-customer.php'
+    //     //   </script> ";
+    //             echo mysqli_error($cn);
+
+    // } else {
+    //     // echo "<script>alert('only pdf files are uploaded.....')
+    //     // window.location.href='add-customer.php'
+    //     // </script> ";
+    //     echo mysqli_error($cn);
+
+    // }
 }
