@@ -11,9 +11,9 @@
             </a>
         </div><!-- /size-toggle -->
         <div class="user-block clearfix">
-            <img src="img/user.jpg" alt="User Avatar">
+            <img src="<?php echo $admin_photo;  ?>" alt="User Avatar not found">
             <div class="detail">
-                <strong>John Doe</strong><span class="badge badge-danger bounceIn animation-delay4 m-left-xs">4</span>
+                <strong><?php echo $username; ?></strong><span class="badge badge-danger bounceIn animation-delay4 m-left-xs">4</span>
                 <ul class="list-inline">
                     <li><a href="profile.php">Profile</a></li>
                     <li><a href="inbox.html" class="no-margin">Inbox</a></li>

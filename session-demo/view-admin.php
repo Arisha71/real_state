@@ -4,7 +4,7 @@ include("config.php");
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>fatehlinks</title>
+    <title>View Admin Details</title>
     <?php include("./include/linked-files.html"); ?>
     
   </head>

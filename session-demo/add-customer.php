@@ -1,7 +1,7 @@
 <?php include("auth.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
-<title>fatehlinks</title>
+<title>Customer</title>
 <?php include("./include/linked-files.html"); ?>
 
 <div id="wrapper" class="preload">
@@ -13,8 +13,8 @@
 				<div class="col-lg-12">
 					<div class="panel panel-default">
 						<form action="fir-add-queries.php" method="post" enctype="multipart/form-data">
-							<div class="panel-heading">
-								Customer data
+							<div class="panel-heading fa fa-user">
+								Customer
 							</div>
 
 							<div class="panel-body">
@@ -116,8 +116,8 @@
 									</div>
 								</div>
 								<div class="panel-footer text-right">
-									<button class="btn btn-success" type="add-student" name="add-customer">Add Customer</button>
-									<button class="btn btn-success" type="reset">Clear</button>
+									<button class="btn btn-success fa fa-plus" type="add-student" name="add-customer"> Add Customer</button>
+									<button class="btn btn-success fa fa-retweet" type="reset"> Clear</button>
 								</div>
 						</form>
 					</div><!-- /panel -->
