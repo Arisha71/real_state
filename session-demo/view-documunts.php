@@ -45,7 +45,7 @@
 											<!-- show data in the rows -->
 											<tr>
 												<td><?php echo $id; ?></td>
-												<td class="text-center"><iframe type="pdf" src="./upload-file/<?php $image ?>" height="450px" width="850px" alt=""></iframe></td>
+												<td class="text-center"><iframe type="pdf" src="upload-file/	<?php $image ?>" height="450px" width="850px" alt=""></iframe></td>
 												<td>
 													<a href='edit-customer.php?id=<?php echo $id; ?>'><i class="fa fa-edit"></i></a>
 													|
