@@ -17,7 +17,7 @@
             $file_tmp =$_FILES['photo']['tmp_name'];
             $file_type=$_FILES['photo']['type'];
 
-            $photo_dir = "upload-files/". $file_name;
+            $photo_dir = "upload-file/". $file_name;
 
             move_uploaded_file($file_tmp , $photo_dir);
  

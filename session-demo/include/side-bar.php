@@ -6,7 +6,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </a>
-            <a class="btn btn-sm pull-right logoutConfirm_open" href="blank.html#logoutConfirm">
+            <a class="btn btn-sm pull-right logoutConfirm_open" href="logout.php">
                 <i class="fa fa-power-off"></i>
             </a>
         </div><!-- /size-toggle -->
@@ -53,8 +53,8 @@
                         <span class="menu-hover"></span>
                     </a>
                     <ul class="submenu">
-                        <li><a href="add-customer.php"><span class="submenu-label">Add Customer</span></a></li>
-                        <li><a href="view-customer.php"><span class="submenu-label">View Customer</span></a></li> 
+                        <li><a href="add-customer.php"><span class="submenu-label"><i class="fa fa-plus fa-lg"></i>  Add Customer</span></a></li>
+                        <li><a href="view-customer.php"><span class="submenu-label"><i class="fa fa-eye fa-lg"></i> View Customer</span></a></li> 
                       </ul>
                 </li>
                 <li>

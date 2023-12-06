@@ -12,7 +12,7 @@
 	<?php include("./include/top-nav.html"); ?>
 
 	<div id="wrapper" class="preload">
-		<?php include("./include/side-bar.html"); ?>
+		<?php include("./include/side-bar.php"); ?>
 		<div id="main-container">
 			<div class="padding-md">
 				<div class="row">

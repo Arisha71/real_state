@@ -37,7 +37,7 @@
 	<?php include("./include/top-nav.html"); ?>
 	<div id="wrapper" class="preload">
 
-		<?php include("./include/side-bar.html"); ?>
+		<?php include("./include/side-bar.php"); ?>
 
 
 		<div id="main-container">
@@ -46,6 +46,8 @@
 					<li><i class="fa fa-home"></i><a href="index.php"> Home</a></li>
 					<li>Page</li>
 					<li class="active"><a href="admin.php">Add admin</a></li>
+					<li class="active"><a href="view-admin.php">View admin</a></li>
+
 				</ul>
 			</div><!--breadcrumb-->
 			<ul class="tab-bar grey-tab">

@@ -6,7 +6,7 @@
 
 <div id="wrapper" class="preload">
 	<?php include("./include/top-nav.html"); ?>
-	<?php include("./include/side-bar.html"); ?>
+	<?php include("./include/side-bar.php"); ?>
 	<div id="main-container">
 		<div class="padding-md">
 			<div class="row">
@@ -21,31 +21,31 @@
 								<div class="row">
 									<div class="col-md-3">
 										<div class="form-group">
-											<label class="control-label">Name</label>
+											<label class="control-label">Name <font style="color: red;">  * </font></label>
 											<input type="text" name="name" id="name" onkeyup="text()" placeholder="Your name" class="form-control input-sm" required>
 										</div>
 									</div><!-- /.col -->
 									<div class="col-md-3">
 										<div class="form-group">
-											<label class="control-label">Father name</label>
-											<input type="text" placeholder="Your fname" id="fname" onkeyup="text()" name="fname" class="form-control input-sm">
+											<label class="control-label">Father name <font style="color: red;">  * </font></label>
+											<input type="text" placeholder="Your fname" id="fname" onkeyup="text()" name="fname" class="form-control input-sm" required>
 										</div>
 									</div><!-- /.col -->
 									<div class="col-md-3">
 										<div class="form-group">
-											<label class="control-label">CNIC</label>
+											<label class="control-label">CNIC <font style="color: red;">  * </font></label>
 											<input type="text" name="cnic" data-inputmask="'mask':'99999-9999999-9'" placeholder="xxxxx-xxxxxxx-x" maxlength="15" placeholder="xxxxx-xxxxxxx-x" class="form-control input-sm" required>
 										</div>
 									</div><!-- /.col -->
 									<div class="col-md-3">
 										<div class="form-group">
-											<label class="control-label"> Mobile</label>
-											<input type="text" data-inputmask="'mask' :'0399-9999999'" placeholder="xxxx-xxxxxxx" type="number" maxlength="12" name="mobile" class="form-control input-sm">
+											<label class="control-label"> Mobile <font style="color: red;">  * </font></label>
+											<input type="text" data-inputmask="'mask' :'0399-9999999'" placeholder="xxxx-xxxxxxx" type="number" maxlength="12" name="mobile" class="form-control input-sm" required>
 										</div>
 									</div><!-- /.col -->
 									<div class="col-md-12">
 										<div class="form-group">
-											<label class="control-label"> Address</label>
+											<label class="control-label"> Address (optional)</label>
 											<input type="text" placeholder="Enter address here..." onkeyup="text()" name="address" class="form-control input-sm">
 										</div>
 									</div><!-- /.col -->
@@ -57,27 +57,27 @@
 								<div class="row">
 									<div class="col-md-4">
 										<div class="form-group">
-											<label class="control-label">Plot #</label>
+											<label class="control-label">Plot # <font style="color: red;">  * </font></label>
 											<input type="number" placeholder="plot no" name="plotno" class="form-control input-sm" required>
 										</div>
 									</div>
-									<!-- <div class="col-md-4">
+									<div class="col-md-4">
 										<div class="form-group">
-											<label class="control-label">Plan Start </label>
+											<label class="control-label">From <font style="color: red;">  * </font> </label>
 											<input type="date" placeholder="start" name="start" class="form-control input-sm" required>
 										</div>
 									</div>
 									<div class="col-md-4">
 										<div class="form-group">
-											<label class="control-label">Plan End</label>
+											<label class="control-label">To <font style="color: red;">  * </font></label>
 											<input type="date" placeholder="end" name="end" class="form-control input-sm" required>
 										</div>
-									</div> -->
+									</div>
 
 									<div class="col-md-4">
 										<div class="form-group">
-											<label class="control-label">Plot Installment</label>
-											<select name="installment" class="form-control input-sm">
+											<label class="control-label" >Plot Installment <font style="color: red;">  * </font></label>
+											<select name="installment" class="form-control input-sm" required>
 												<option value="-1">Choose Installment Plan
 												<option value="3 month">3 Month</option>
 												<option value="6 month">6 Month</option>
@@ -90,28 +90,28 @@
 									</div><!-- /.col -->
 									<div class="col-md-4">
 										<div class="form-group">
-											<label class="control-label">Total Price</label>
-											<input type="number" placeholder="price" id="totalAmount" name="price" class="form-control input-sm">
+											<label class="control-label">Total Price <font style="color: red;">  * </font></label>
+											<input type="number" placeholder="price" id="totalAmount" name="price" class="form-control input-sm" required>
 										</div>
 									</div><!-- /.col -->
 									<div class="col-md-4">
 										<div class="form-group">
-											<label class="control-label">Plot Advance</label>
-											<input type="number" placeholder="plot advance" id="amountPaid" oninput="remainig()" name="advance" class="form-control input-sm">
+											<label class="control-label">Amount paied<font style="color: red;">  * </font></label>
+											<input type="number" placeholder="amount paied" id="amountPaid" oninput="remainig()" name="advance" class="form-control input-sm" required>
 										</div>
 									</div><!-- /.col -->
 									<div class="col-md-4">
 										<div class="form-group">
-											<label class="control-label">Remaning Price</label>
-											<input type="number" name="remaning" id="remainingAmount" class="form-control input-sm">
+											<label class="control-label">Remaning Price <font style="color: red;">  * </font></label>
+											<input type="number" name="remaning" placeholder="remianing price" id="remainingAmount" class="form-control input-sm" required>
 											<!-- <p class="text-bold"><span class="form-control" name="remaning" id="remainingAmount" ></span></p> -->
 										</div>
 									</div><!-- /.col -->
 
 									<div class="col-md-4 ">
 										<div class="form-group">
-											<label for="exampleInputEmail1">Upload Documunts</label>
-											<input type="file" name="photo" class="form-control input-sm" id="exampleInputEmail1" placeholder="Enter email">
+											<label for="exampleInputEmail1">Upload Documunts <font style="color: red;">  * </font></label>
+											<input type="file" name="photo" class="form-control input-sm" id="exampleInputEmail1" placeholder="Enter email" required>
 										</div>
 									</div>
 								</div>

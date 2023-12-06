@@ -6,11 +6,11 @@
 
 <div id="wrapper" class="preload">
     <?php include("./include/top-nav.html"); ?>
-    <?php include("./include/side-bar.html"); ?>
+    <?php include("./include/side-bar.php"); ?>
     <br><br><br><br>
 
     <div id="main-container">
-        <div class="panel panel-default">
+        <div class="panel panel-default ">
             <form class="form-horizontal form-border" action="fir-admin-query.php" method="post" enctype="multipart/form-data">
                 <div class="panel-heading">
                     Admin Information

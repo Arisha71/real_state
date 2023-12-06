@@ -9,8 +9,8 @@ if (isset($_POST['add-customer'])) {
     $mobile = $_POST['mobile'];
     $address = $_POST['address'];
     $plot_no = $_POST['plotno'];
-    // $start = $_POST['start'];
-    // $end = $_POST['end'];
+    $start = $_POST['start'];
+    $end = $_POST['end'];
     $installment = $_POST['installment'];
     $price = $_POST['price'];
     $advance = $_POST['advance'];
@@ -29,8 +29,8 @@ if (isset($_POST['add-customer'])) {
 
     if ($file_extension == 'pdf') {
         move_uploaded_file($file_tmp, $photo_dir);
-        $add_customer_query = mysqli_query($cn, "INSERT INTO `property_selling`(`name`, `father_name`,`cnic`,`mobile`,`address`,`plot_no`,`installment`,`price`, `advance`,`remaning`,`image`,`status`) 
-         VALUES ('$name','$father_name','$cnic','$mobile','$address','$plot_no', 
+        $add_customer_query = mysqli_query($cn, "INSERT INTO `property_selling`(`name`, `father_name`,`cnic`,`mobile`,`address`,`plot_no`,`start_date`,`end_date`,`installment`,`price`, `advance`,`remaning`,`image`,`status`) 
+         VALUES ('$name','$father_name','$cnic','$mobile','$address','$plot_no', '$start', '$end', 
          '$installment','$price','$advance','$remaning','$photo_dir','1')");
          header("Location: add-customer.php");
        // echo "<script>alert('pdf file type is uploaded.....')
