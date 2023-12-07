@@ -4,7 +4,7 @@
 <title>Admin Details</title>
 <?php include("./include/linked-files.html"); ?>
 <div id="wrapper" class="preload">
-    <?php include("./include/top-nav.html"); ?>
+    <?php include("./include/top-nav.php"); ?>
     <?php include("./include/side-bar.php"); ?>
 
     <div id="main-container">

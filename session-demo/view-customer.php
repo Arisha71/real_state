@@ -1,9 +1,10 @@
 <!-- Including include/auth.php file for user authentication -->
+<?php include("auth.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Customer Details</title>
+    <title>View Customer</title>
     <!-- Datatable -->
     <link href="css/jquery.dataTables_themeroller.css" rel="stylesheet">
 
@@ -15,7 +16,7 @@
     <div id="wrapper" class="preload">
 
         <!-- Including top-nav from include folders -->
-        <?php include("include/top-nav.html"); ?>
+        <?php include("include/top-nav.php"); ?>
 
         <!-- Including side-bar from include folders -->
         <?php include("include/side-bar.php"); ?>
