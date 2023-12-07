@@ -13,7 +13,7 @@
         <div class="user-block clearfix">
             <img src="<?php echo $_SESSION['uinfo']['profile_picture'];  ?>" alt="User Avatar not found">
             <div class="detail">
-                <strong><?php echo $_SESSION['uinfo']['username']; ?></strong><span class="badge badge-danger bounceIn animation-delay4 m-left-xs">4</span>
+                <strong><?php echo $_SESSION['uinfo']['name']; ?></strong><span class="badge badge-danger bounceIn animation-delay4 m-left-xs">4</span>
                 <ul class="list-inline">
                     <li><a href="profile.php">Profile</a></li>
                     <li><a href="inbox.html" class="no-margin">Inbox</a></li>
