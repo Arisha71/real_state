@@ -77,15 +77,15 @@
 						<div class="row">
 							<div class="col-xs-6 col-sm-12 col-md-6 text-center">
 								<a href="profile.php">
-									<img src=" <?php echo $admin_photo;  ?>" alt="User Avatar" class="img-thumbnail">
+									<img src=" <?php echo $_SESSION['uinfo']['profile_picture'];  ?>" alt="User Avatar" class="img-thumbnail">
 								</a>
 								<div class="seperator"></div>
 								<div class="seperator"></div>
 							</div><!-- /.col -->
 							<div class="col-xs-6 col-sm-12 col-md-6">
-								<strong class="font-14"><?php echo $username; ?></strong>
+								<strong class="font-14"><?php echo $_SESSION['uinfo']['name'];  ?></strong>
 								<small class="block text-muted">
-									<?php echo $admin_email; ?>
+								<?php echo $_SESSION['uinfo']['email'];  ?>
 								</small>
 								<div class="seperator"></div>
 								<a class="btn btn-success btn-xs m-bottom-sm">Follow</a>

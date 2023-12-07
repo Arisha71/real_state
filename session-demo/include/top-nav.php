@@ -129,20 +129,20 @@
         </li>
         <li class="profile dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="blank.html#">
-                <strong>John Doe</strong>
+                <strong><?php echo $_SESSION['uinfo']['name'];  ?></strong>
                 <span><i class="fa fa-chevron-down"></i></span>
             </a>
             <ul class="dropdown-menu">
                 <li>
                     <a class="clearfix" href="blank.html#">
-                        <img src="img/user.jpg" alt="User Avatar">
+                        <img src="<?php echo $_SESSION['uinfo']['profile_picture'];  ?>" alt="User Avatar">
                         <div class="detail">
-                            <strong>John Doe</strong>
-                            <p class="grey">John_Doe@email.com</p> 
+                            <strong><?php echo $_SESSION['uinfo']['name'];  ?></strong>
+                            <p class="grey"><?php echo $_SESSION['uinfo']['email'];  ?></p> 
                         </div>
                     </a>
                 </li>
-                <li><a tabindex="-1" href="profile.html" class="main-link"><i class="fa fa-edit fa-lg"></i> Edit profile</a></li>
+                <li><a tabindex="-1" href="edit-admin.php" class="main-link"><i class="fa fa-edit fa-lg"></i> Edit profile</a></li>
                 <li><a tabindex="-1" href="gallery.html" class="main-link"><i class="fa fa-picture-o fa-lg"></i> Photo Gallery</a></li>
                 <li><a tabindex="-1" href="blank.html#" class="theme-setting"><i class="fa fa-cog fa-lg"></i> Setting</a></li>
                 <li class="divider"></li>

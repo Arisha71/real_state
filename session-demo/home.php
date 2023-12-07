@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>fatehlinks</title>
+    <title>Home</title>
     <?php include("./include/linked-files.html"); ?>
     
   </head>
