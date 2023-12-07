@@ -29,8 +29,8 @@
 				<div class="panel-body">
 					<form  method="post">
 						<div class="form-group">
-							<label>Username</label>
-							<input type="text" placeholder="Username" class="form-control input-sm bounceIn animation-delay2" name="username" required>
+							<label>Email</label>
+							<input type="text" placeholder="email" class="form-control input-sm bounceIn animation-delay2" name="email" required>
 						</div>
 						<div class="form-group">
 							<label>Password</label>
@@ -67,14 +67,14 @@
 <!-- authentication code -->
 <?php
  if(isset($_POST['login'])){
-    $username=$_POST['username'];
-    $password=$_POST['password']; 
-   $select_admin_qury = "SELECT * FROM admin WHERE password = '$password'";
+    $admin_email=$_POST['email'];
+    $admin_password=$_POST['password']; 
+   $select_admin_qury = "SELECT * FROM admin WHERE password = '$admin_password' AND email = '$admin_email' ";
    $result = mysqli_query($cn,$select_admin_qury);
    if($result){
 	if(mysqli_num_rows($result)>0){
 		$row = mysqli_fetch_assoc($result);
-		if($password == $row['password']){
+		if($admin_password == $row['password'] AND $admin_email == $row['email']){
 
 			$userinfo = array();
 			$userinfo['id'] = $row['id'];
