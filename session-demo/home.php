@@ -8,7 +8,7 @@
   </head>
 
   <body class="overflow-hidden">
-  <?php include("./include/top-nav.html"); ?>
+  <?php include("./include/top-nav.php"); ?>
 
 	<div id="wrapper" class="preload">
         <?php include("./include/side-bar.php"); ?>

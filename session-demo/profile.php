@@ -1,3 +1,5 @@
+
+<?php include("auth.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +36,7 @@
 	<?php }
 	}  ?>
 
-	<?php include("./include/top-nav.html"); ?>
+	<?php include("./include/top-nav.php"); ?>
 	<div id="wrapper" class="preload">
 
 		<?php include("./include/side-bar.php"); ?>

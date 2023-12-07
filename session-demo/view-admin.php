@@ -10,7 +10,7 @@ include("config.php");
   </head>
 
   <body class="overflow-hidden">
-  <?php include("./include/top-nav.html"); ?>
+  <?php include("./include/top-nav.php"); ?>
 <br><br><br>
 	<div id="wrapper" class="preload">
         <?php include("./include/side-bar.php"); ?>

@@ -24,7 +24,7 @@
                     <a class="clearfix" href="blank.html#">
                         <img src="img/user.jpg" alt="User Avatar">
                         <div class="detail">
-                            <strong>John Doe</strong>
+                            <strong></strong>
                             <p class="no-margin">
                                 Lorem ipsum dolor sit amet...
                             </p>

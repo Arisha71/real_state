@@ -1,3 +1,4 @@
+
 <aside class="fixed skin-6">
     <div class="sidebar-inner scrollable-sidebars">
         <div class="size-toggle">
@@ -9,6 +10,7 @@
             <a class="btn btn-sm pull-right logoutConfirm_open" href="logout.php">
                 <i class="fa fa-power-off"></i>
             </a>
+            
         </div><!-- /size-toggle -->
         <div class="user-block clearfix">
             <img src="<?php echo $_SESSION['uinfo']['profile_picture'];  ?>" alt="User Avatar not found">
