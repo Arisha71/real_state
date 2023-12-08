@@ -86,7 +86,7 @@
                                                 </button>
                                                     <ul class="dropdown-menu slidedown">
                                                         <li><a href="active-status.php?id=<?php echo $id;  ?>"><i class="fa fa-check-circle"></i> Active</a></li>
-                                                        <li><a href="inactive-status.php?id=<?php echo $id;  ?>"><i class="fa fa-check-circle"></i> Inactive</a></li>
+                                                        <li><a href="inactive-status.php?id=<?php echo $id;  ?>"><i class="fa fa-times-circle"></i> Inactive</a></li>
                                                     </ul>
                                                 
                                             </div>
