@@ -8,14 +8,6 @@
     <?php include("./include/side-bar.php"); ?>
 
     <div id="main-container">
-    <div id="breadcrumb">
-				<ul class="breadcrumb">
-					<li><i class="fa fa-home"></i><a href="profile.php"> Home</a></li>
-					<li class="active"><a href="admin.php">Add admin</a></li>
-					<li class="active"><a href="view-admin.php">View admin</a></li>
-
-				</ul>
-			</div><!--breadcrumb-->
         <div class="padding-md">
             <div class="row">
                 <div class="col-lg-12">
