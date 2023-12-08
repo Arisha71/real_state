@@ -13,7 +13,7 @@
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <form class="form-horizontal form-border" action="fir-admin-query.php" method="post" enctype="multipart/form-data">
-                            <div class="panel-heading fa fa-user">
+                            <div class="panel-heading fa fa-user fa-lg">
                                 Admin
                             </div>
                             <div class="panel-body">
@@ -61,7 +61,8 @@
                             </div>
                             <div class="panel-footer">
                                 <div class="text-right">
-                                    <button class="btn btn-sm btn-success fa fa-plus" type="submit" name="add-admin"> Add admin</button>
+                                <button class="btn btn-success fa fa-plus " type="submit" name="add-admin"> Add & Submit
+                                </button>
                                     <!-- <button class="btn btn-sm btn-success" type="reset">Reset</button> -->
                                 </div>
                             </div>
