@@ -14,7 +14,7 @@
 					<div class="panel panel-default">
 						<form action="fir-add-queries.php" method="post" enctype="multipart/form-data">
 							<div class="panel-heading fa fa-user fa-lg fs-bold">
-								Customer
+								Customer  Details
 							</div>
 							<div class="row">
 								<div class="col-md-2"></div>
