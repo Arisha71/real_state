@@ -46,7 +46,7 @@ include("config.php");
                                     <td><?php echo $admin_email; ?></td>
                                     
                                     <td>                                        
-                                        <a href='delete-admin.php?id=<?php echo $id; ?>'><button class="btn btn-secondary"> Delete</button></a>
+                                        <a href='delete-admin.php?id=<?php echo $id; ?>'><button class="btn btn-danger"> Delete</button></a>
                                     </td>
                                 </tr>
                         <?php }
