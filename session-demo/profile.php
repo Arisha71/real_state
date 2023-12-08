@@ -6,6 +6,7 @@
 
 	<title>View Admin Details</title>
 	<?php include("./include/linked-files.html"); ?>
+	<!--================----==================-->
 	<style>
 		.view-content {
 			display: flex;

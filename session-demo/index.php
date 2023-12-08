@@ -25,7 +25,7 @@
 				</div>'";
 			}
 	
-			unset();
+			session_unset();
 				?>
 
 		</div>

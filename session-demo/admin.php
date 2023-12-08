@@ -44,7 +44,11 @@
                                 <div class="form-group">
                                     <label class="control-label col-md-2">User type</label>
                                     <div class="col-md-10">
-                                        <input type="text" class="form-control input-sm" placeholder="user type" name="utype" required>
+                                        <select name="usertype" id=""  class="form-control">
+                                            <option value="-1">--Select User--</option>
+                                            <option value="admin">Admin</option>
+                                            <option value="user">User</option>
+                                        </select>
                                     </div><!-- /.col -->
                                 </div><!-- /form-group -->
                                 <div class="form-group">
