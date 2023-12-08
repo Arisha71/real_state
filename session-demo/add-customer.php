@@ -13,7 +13,7 @@
 				<div class="col-lg-12">
 					<div class="panel panel-default">
 						<form action="fir-add-queries.php" method="post" enctype="multipart/form-data">
-							<div class="panel-heading fa fa-user">
+							<div class="panel-heading fa fa-user fa-lg fs-bold">
 								Customer
 							</div>
 
@@ -110,14 +110,14 @@
 
 									<div class="col-md-4 ">
 										<div class="form-group">
-											<label for="exampleInputEmail1">Upload Documunts <font style="color: red;">  * </font></label>
+											<label for="exampleInputEmail1">Upload Documunts  (Only PDF)<font style="color: red;">  * </font></label>
 											<input type="file" name="photo" class="form-control input-sm" id="exampleInputEmail1" placeholder="Enter email" required>
 										</div>
 									</div>
 								</div>
 								<div class="panel-footer text-right">
-									<button class="btn btn-success fa fa-plus" type="add-student" name="add-customer"> Add Customer</button>
-									<button class="btn btn-success fa fa-retweet" type="reset"> Clear</button>
+									<button class="btn btn-success fa fa-plus" type="submit" name="add-customer"> Add & Submit</button>
+									<!-- <button class="btn btn-success fa fa-retweet" type="reset"> Clear</button> -->
 								</div>
 						</form>
 					</div><!-- /panel -->
