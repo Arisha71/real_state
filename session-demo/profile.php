@@ -46,8 +46,7 @@
 		<div id="main-container">
 			<div id="breadcrumb">
 				<ul class="breadcrumb">
-					<li><i class="fa fa-home"></i><a href="index.php"> Home</a></li>
-					<li>Page</li>
+					<li><i class="fa fa-home"></i><a href="home.php"> Home</a></li>
 					<li class="active"><a href="admin.php">Add admin</a></li>
 					<li class="active"><a href="view-admin.php">View admin</a></li>
 

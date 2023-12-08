@@ -31,7 +31,7 @@
 					<form method="post">
 						<div class="form-group">
 							<label>Email</label>
-							<input type="text" placeholder="email" class="form-control input-sm bounceIn animation-delay2" name="email" required>
+							<input type="email" placeholder="email" class="form-control input-sm bounceIn animation-delay2" name="email" required>
 						</div>
 						<div class="form-group">
 							<label>Password</label>
