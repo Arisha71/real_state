@@ -26,7 +26,7 @@
                                 <div class="form-group">
                                     <label class="control-label col-md-2">Email</label>
                                     <div class="col-md-10">
-                                        <input type="text" class="form-control input-sm" placeholder="email" name="email" required>
+                                        <input type="email" class="form-control input-sm" placeholder="email" name="email" required>
                                     </div><!-- /.col -->
                                 </div><!-- /form-group -->
                                 <div class="form-group">
@@ -44,7 +44,7 @@
                                 <div class="form-group">
                                     <label class="control-label col-md-2">User type</label>
                                     <div class="col-md-10">
-                                        <select name="usertype" id=""  class="form-control">
+                                        <select name="usertype" id="" class="form-control">
                                             <option value="-1">--Select User--</option>
                                             <option value="admin">Admin</option>
                                             <option value="user">User</option>
@@ -72,7 +72,7 @@
             </div>
         </div>
     </div><!--main container-->
-                </body>
+    </body>
 
 </html>
 
