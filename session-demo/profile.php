@@ -183,7 +183,7 @@ else{
 											<div class="form-group">
 												<label class="control-label col-md-2">Email</label>
 												<div class="col-md-10">
-													<input type="text" class="form-control input-sm" value='<?php echo $admin_email; ?>' name="email">
+													<input type="text" class="form-control input-sm" value='<?php echo $admin_email; ?>' name="email" readonly>
 												</div><!-- /.col -->
 											</div><!-- /form-group -->
 											<div class="form-group">

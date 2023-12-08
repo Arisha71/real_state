@@ -46,8 +46,8 @@
                                     <div class="col-md-10">
                                         <select name="usertype" id="" class="form-control">
                                             <option value="-1">--Select User--</option>
-                                            <option value="admin">Admin</option>
-                                            <option value="user">User</option>
+                                            <option value="admin" name="admin">Admin</option>
+                                            <option value="user" name="user">User</option>
                                         </select>
                                     </div><!-- /.col -->
                                 </div><!-- /form-group -->
