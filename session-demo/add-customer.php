@@ -64,21 +64,21 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="control-label">From <font style="color: red;">  * </font> </label>
-											<input type="date" placeholder="start" <?php echo $currentDate ?> name="start" class="form-control input-sm" required>
+											<input type="date" placeholder="start" oninput="DateTime()" name="start" class="form-control input-sm" required>
 										</div>
 										<?php
 
 										// Get the current date and time
 										$currentDate = new DateTime();
-
 										// Assume you have a previous date stored in a variable, $previousDate
 										$previousDate = new DateTime('2023-01-01'); // Replace this with your actual previous date
 
 										// Compare the dates
-										if ($currentDate >= $previousDate) {
-											echo "Current date is not less than the previous date.";
+										if ($currentDate <= $previousDate) {
+									    echo "Current date is less than the previous date.";
+
 										} else {
-											echo "Current date is less than the previous date.";
+						                  echo "Current date is not less than the previous date.";
 										}
 
 										?>
@@ -87,7 +87,7 @@
 									<div class="col-md-4">
 										<div class="form-group">
 											<label class="control-label">To <font style="color: red;">  * </font></label>
-											<input type="date" placeholder="end" <?php echo $pre ?> name="end" class="form-control input-sm" required>
+											<input type="date" placeholder="end" oninput="DateTime()" name="end" class="form-control input-sm" required>
 										</div>
 									</div>
 

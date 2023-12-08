@@ -41,20 +41,5 @@ if (isset($_POST['add-customer'])) {
         window.location.href='add-customer.php'
         </script> ";
         //echo mysqli_error($cn);
-
-    //     $add_customer_query = mysqli_query($cn, "INSERT INTO `property_selling`(`name`, `father_name`,`cnic`,`mobile`,`address`,`plot_no`,`installment`,`price`, `advance`,`remaning`,`image`,`status`) 
-    //      VALUES ('$name','$father_name','$cnic','$mobile','$address','$plot_no','$installment','$price','$advance','$remaning','$photo_dir','1')");
-    //     //   echo "<script>alert('pdf file type is uploaded.....')
-    //     //   window.location.href='add-customer.php'
-    //     //   </script> ";
-    //             echo mysqli_error($cn);
-
-    // } else {
-    //     // echo "<script>alert('only pdf files are uploaded.....')
-    //     // window.location.href='add-customer.php'
-    //     // </script> ";
-    //     echo mysqli_error($cn);
-
-    // }
 }
 }

@@ -80,12 +80,17 @@
                                                 ?>
                                             
                                             </td>
-                                            
-
                                             <td>
-                                                <a href='edit-customer.php?id=<?php echo $id; ?>'><i class="fa fa-edit"></i></a>
-                                                |
-                                                <a href='delete.php?deleteid=<?php echo $id; ?>'><i class=" fa fa-trash-o"></i></a>
+                                            <div class="btn-group pull-center">
+                                                <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                                    Action <i class="fa fa-chevron-down"></i>
+                                                </button>
+                                                    <ul class="dropdown-menu slidedown">
+                                                        <li><a href="active-status.php?id=<?php echo $id;  ?>"><i class="fa fa-check-circle"></i> Active</a></li>
+                                                        <li><a href="inactive-status.php?id=<?php echo $id;  ?>"><i class="fa fa-check-circle"></i> Inactive</a></li>
+                                                    </ul>
+                                                
+                                            </div>
                                             </td>
                                         </tr>
                                 <?php }
