@@ -69,7 +69,17 @@
                                             <td><?php echo $mobile; ?></td>
                                             <td><?php echo $address; ?></td>
                                             <td><?php echo $price; ?></td>
-                                            <td><?php echo $status; ?></td>
+                                            <td>
+                                                <?php if( $status==1){
+                                                    echo "<span class='label label-success'>Active</span>";
+                                                } 
+                                                else{
+                                                    echo "<span class='label label-warning'>Inactive</span>";
+
+                                                }
+                                                ?>
+                                            
+                                            </td>
                                             
 
                                             <td>
