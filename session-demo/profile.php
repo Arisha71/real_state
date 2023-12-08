@@ -138,7 +138,7 @@
 													</div>
 													<div>
 														<h4>Role</h4>
-														<?php echo $admin_usertype; ?>
+														<?php echo $admin_usertype  ?>
 													</div>
 												</div>
 											</div>

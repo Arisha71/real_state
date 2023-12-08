@@ -8,7 +8,7 @@ if(isset($_POST['edit-admin'])){
             $admin_email = $_POST['email'];
             $admin_Password = $_POST['Password'];
             $admin_mobile = $_POST['mobile'];
-            $admin_usertype = $_POST['utype'];
+            $admin_usertype = $_POST['usertype'];
             $photo = $_POST['photo'];
 
             //update query
