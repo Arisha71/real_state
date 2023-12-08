@@ -11,28 +11,6 @@
 <body>
 <div class="login-wrapper">
 		<div class="text-center">
-
-	    <div class="row">
-		<div class="col-md-4">
-		<?php if (!empty($_SESSION['status'])){
-				
-				$message = $_SESSION['status'];
-					echo "'
-			<div class='alert alert-success'>
-	          <button type='button' class=btn-close data-bs-dismiss='alert'></button>
-					</div>
-					<strong>Message!</strong> $message
-				</div>'";
-			}
-	
-			session_unset();
-				?>
-
-		</div>
-	</div>
-	
-			
-
 			<h2 class="fadeInUp animation-delay8" style="font-weight:bold">
 				<span class="text-success">REAL STATE</span> <span style="color:#ccc; text-shadow:0 1px #fff">Admin</span>
 			</h2>
@@ -111,7 +89,6 @@ if (isset($_POST['login'])) {
 
 				session_start();
 				$_SESSION['uinfo'] = $userinfo;
-				$_SESSION['status'] == 'Your are login successfully...';
 
 				$_SESSION['user'] = $row['username'];
 
