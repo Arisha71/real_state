@@ -102,7 +102,7 @@
                                             <td><?php echo $father_name; ?></td>
                                             <td><?php echo $mobile; ?></td>
                                             <td><?php echo $address; ?></td>
-                                            <td><?php echo $price; ?></td>
+                                            <td><?php echo number_format($price); ?></td>
                                             <td>
                                                 <?php if( $status==1){
                                                     echo "<span class='label label-success'>Active</span>";
