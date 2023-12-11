@@ -70,22 +70,41 @@
 					</a>
 				</li>
 			</ul>
+<?php
+			// create select query.....
+$get_id = $_GET['customer-id']; //get data by id
+$qry = "SELECT *  FROM admin  WHERE id='$get_id'";
+$result = $cn->query($qry);
+$num_rows = mysqli_num_rows($result); //number of rows
+$rows = mysqli_fetch_array($result);
+//if data found then....
+if($num_rows>0){
 
+	$id = $rows['id'];
+	$username = $rows['username'];
+	$admin_mobile = $rows['email'];
+	$admin_mobile = $rows['mobile'];
+	$admin_usertype = $rows['usertype'];
+	$admin_photo = $rows['photo'];
+}
+else{
+}
+?>
 			<div class="padding-md">
 				<div class="row">
 					<div class="col-md-3 col-sm-3">
 						<div class="row">
 							<div class="col-xs-6 col-sm-12 col-md-6 text-center">
 								<a href="profile.php">
-									<img src=" <?php echo $_SESSION['uinfo']['profile_picture'];  ?>" alt="User Avatar" class="img-thumbnail">
+									<img src=" <?php echo $admin_photo  ?>" alt="User Avatar" class="img-thumbnail">
 								</a>
 								<div class="seperator"></div>
-								<div class="seperator"></div>
+								<div class="seperator"></div>	
 							</div><!-- /.col -->
 							<div class="col-xs-6 col-sm-12 col-md-6">
-								<strong class="font-14"><?php echo $_SESSION['uinfo']['name'];  ?></strong>
+								<strong class="font-14"><?php echo $username;  ?></strong>
 								<small class="block text-muted">
-								<?php echo $_SESSION['uinfo']['email'];  ?>
+								<?php echo $admin_email ;  ?>
 								</small>
 								<div class="seperator"></div>
 								<a class="btn btn-success btn-xs m-bottom-sm">Follow</a>
@@ -120,7 +139,7 @@
 									<div class="col-md-10">
 										<div class="panel panel-default fadeInDown animation-delay2">
 											<div class="panel-heading">
-												About Me
+											<i class="fa fa-user fa-lg"></i> <strong>About Me</strong>
 											</div>
 											<div class="panel-body">
 												<div class="view-content">
@@ -152,7 +171,7 @@
 								<div class="panel panel-default">
 									<form class="form-horizontal form-border" action="fir-admin-update.php" method="post">
 										<div class="panel-heading">
-											Admin Information <input type="hidden" name="admin-edit-page-id" value='<?php echo $id; ?>'>
+										<i class="fa fa-user fa-lg"></i> <strong>Admin Information </strong><input type="hidden" name="admin-edit-page-id" value='<?php echo $id; ?>'>
 										</div>
 										<div class="panel-body">
 											<div class="form-group">
@@ -195,8 +214,8 @@
 										</div>
 										<div class="panel-footer">
 											<div class="text-right">
-												<button class="btn btn-sm btn-success" type="submit" name="edit-admin">Edit admin</button>
-												<button class="btn btn-sm btn-success" type="reset">Reset</button>
+												<button class="btn btn-sm btn-success" type="submit" name="edit-admin"><i class="fa fa-plus fa-lg"></i> Edit admin</button>
+												<button class="btn btn-sm btn-success" type="reset"><i class="fa fa-retweet fa-lg"></i>Reset</button>
 											</div>
 										</div>
 									</form>

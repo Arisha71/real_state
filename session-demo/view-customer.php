@@ -24,8 +24,8 @@
         <div id="main-container">
             <div class="padding-md">
                 <div class="panel panel-default table-responsive">
-                    <div class="panel-heading fa fa-eye">
-                        View Customer
+                    <div class="panel-heading ">
+                       <i class="fa fa-eye fa-lg"></i> <strong>View Customer</strong> 
 
                         <span class="label label-info pull-right"></span>
                     </div>
@@ -64,7 +64,7 @@
                                 ?>
                                         <!-- show data in the rows -->
                                         <tr>
-                                            <td><?php echo $name; ?></td>
+                                        <td><a href="customer-info-display.php?customer_id=<?php echo $id; ?>"> <?php echo $name; ?> </a></td>
                                             <td><?php echo $father_name; ?></td>
                                             <td><?php echo $mobile; ?></td>
                                             <td><?php echo $address; ?></td>
