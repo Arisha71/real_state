@@ -1,4 +1,3 @@
-
 <div id="breadcrumb">
 				<ul class="breadcrumb">
 					 <li><i class="fa fa-home"></i><a href="index.html"> Home</a></li>
@@ -6,10 +5,11 @@
 				</ul>
 			</div><!-- breadcrumb -->
 			
+	
 				<div class="main-header clearfix">
 				<div class="page-title">
 					<h3 class="no-margin">Dashboard</h3>
-					<span>Welcome: <?php echo $_SESSION['user']; ?></span>
+					<span>Welcome: <?php  echo $_SESSION['name']; ?></span>
 				</div><!-- /page-title -->
 			</div><!-- /main-header -->
 			

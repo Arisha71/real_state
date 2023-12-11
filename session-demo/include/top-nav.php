@@ -129,16 +129,16 @@
         </li>
         <li class="profile dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="blank.html#">
-                <strong><?php echo $_SESSION['uinfo']['name'];  ?></strong>
+                <strong><?php echo $_SESSION['name'];  ?></strong>
                 <span><i class="fa fa-chevron-down"></i></span>
             </a>
             <ul class="dropdown-menu">
                 <li>
                     <a class="clearfix" href="blank.html#">
-                        <img src="<?php echo $_SESSION['uinfo']['profile_picture'];  ?>" alt="User Avatar">
+                        <img src="<?php echo $_SESSION['image'];  ?>" alt="User Avatar">
                         <div class="detail">
-                            <strong><?php echo $_SESSION['uinfo']['name'];  ?></strong>
-                            <p class="grey"><?php echo $_SESSION['uinfo']['email'];  ?></p> 
+                            <strong><?php echo $_SESSION['name'];  ?></strong>
+                            <p class="grey"><?php echo $_SESSION['email'];  ?></p> 
                         </div>
                     </a>
                 </li>

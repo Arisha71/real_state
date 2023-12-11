@@ -15,8 +15,7 @@ if(isset($_POST['edit-admin'])){
 $update_admin_query = mysqli_query($cn,"UPDATE admin SET username='$admin_username', email='$admin_email', Password='$admin_Password' ,mobile='$admin_mobile', usertype= '$admin_usertype', photo='$photo' WHERE
 id='$admin_edit_page_id'");
 if($update_admin_query){
-header("Location:profile.php");
-     
+header("Location:profile.php");    
 }
 else {
    // echo mysqli_error($cn);

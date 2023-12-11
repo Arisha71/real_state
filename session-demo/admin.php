@@ -8,14 +8,53 @@
     <?php include("./include/side-bar.php"); ?>
 
     <div id="main-container">
+    <div id="breadcrumb">
+				<ul class="breadcrumb">
+					<li><i class="fa fa-home"></i><a href="home.php"> Home</a></li>
+					<li class="active"><a href="admin.php">Add admin</a></li>
+					<li class="active"><a href="view-admin.php">View admin</a></li>
+
+				</ul>
+			</div><!--breadcrumb-->
         <div class="padding-md">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="panel panel-default">
                         <form class="form-horizontal form-border" action="fir-admin-query.php" method="post" enctype="multipart/form-data">
-                            <div class="panel-heading fa fa-user fa-lg">
-                                Admin
+                            <div class="panel-heading">
+							
+                            <div class="row">
+								<div class="col-md-6"><i class="fa fa-user fa-lg"></i> <strong>Admin</strong> </div>
+								<div class="col-md-6">
+									<?php
+									if(session_status() ==PHP_SESSION_NONE){
+                                      session_start();
+									}
+									if (isset($_SESSION['email_alert'])) {
+										$msg = $_SESSION['email_alert'];
+										echo "<div class='alert alert-danger alert-dismissible'>
+										<button type='button' class='close'fade-out data-dismiss='alert'>&times;</button>
+										<strong>Message!</strong> $msg
+									  </div>";
+									}
+									unset($_SESSION['email_alert']);
+									?>
+                                    <?php
+									if(session_status() ==PHP_SESSION_NONE){
+                                      session_start();
+									}
+									if (isset($_SESSION['email_insert'])) {
+										$msg = $_SESSION['email_insert'];
+										echo "<div class='alert alert-success alert-dismissible'>
+										<button type='button' class='close'fade-out data-dismiss='alert'>&times;</button>
+										<strong>Message!</strong> $msg
+									  </div>";
+									}
+									unset($_SESSION['email_insert']);
+									?>
+								</div>
                             </div>
+                            </div> 
                             <div class="panel-body">
                                 <div class="form-group">
                                     <label class="control-label col-md-2">Username</label>
@@ -26,13 +65,13 @@
                                 <div class="form-group">
                                     <label class="control-label col-md-2">Email</label>
                                     <div class="col-md-10">
-                                        <input type="email" class="form-control input-sm" placeholder="email" name="email" required>
+                                        <input type="email" class="form-control input-sm" placeholder="Email" name="email" required>
                                     </div><!-- /.col -->
                                 </div><!-- /form-group -->
                                 <div class="form-group">
                                     <label class="control-label col-md-2">Password</label>
                                     <div class="col-md-10">
-                                        <input type="password" class="form-control input-sm" placeholder="password" name="Password" required>
+                                        <input type="password" class="form-control input-sm" placeholder="Password" name="Password" required>
                                     </div><!-- /.col -->
                                 </div><!-- /form-group -->
                                 <div class="form-group">
@@ -61,7 +100,7 @@
                             </div>
                             <div class="panel-footer">
                                 <div class="text-right">
-                                <button class="btn btn-success fa fa-plus " type="submit" name="add-admin"> Add & Submit
+                               <button class="btn btn-success" type="submit" name="add-admin"><i class=" fa fa-plus "></i> Add & Submit
                                 </button>
                                     <!-- <button class="btn btn-sm btn-success" type="reset">Reset</button> -->
                                 </div>
@@ -82,4 +121,16 @@
 <script src="./maskingCNIC/jquery.inputmask.bundle.js"></script>
 <script>
     $(":input").inputmask();
+</script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    // Function to fade out the session alert after 3 seconds
+    function fadeOutSessionAlert() {
+        $('.alert').fadeOut(400);
+    }
+
+    // Trigger the fade-out function after 3 seconds
+    $(document).ready(function () {
+        setTimeout(fadeOutSessionAlert, 2000);
+    });
 </script>

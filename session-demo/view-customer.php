@@ -25,7 +25,41 @@
             <div class="padding-md">
                 <div class="panel panel-default table-responsive">
                     <div class="panel-heading ">
-                       <i class="fa fa-eye fa-lg"></i> <strong>View Customer</strong> 
+                    <div class="panel-heading">
+						<div class="row">
+							<div class="col-md-6">
+								<i class="fa fa-eye fa-lg"></i> <strong> View Customer</strong>
+                            						</div>
+							<div class="col-md-6">
+								<?php
+								if (session_status() == PHP_SESSION_NONE) {
+									session_start();
+								}
+								if (isset($_SESSION['status']) && $_SESSION['status'] == true) {
+									echo '<div class="alert alert-success alert-dismissible">
+                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                    <strong>Success!</strong> Active Operation is Performed.
+                                    </div>';
+								}
+								unset($_SESSION['status']);
+								?>
+
+								<?php
+								if (session_status() == PHP_SESSION_NONE) {
+									session_start();
+								}
+								if (isset($_SESSION['inactive']) && $_SESSION['inactive'] == true) {
+									echo '<div class="alert alert-warning alert-dismissible">
+                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                    <strong>Success!</strong> Inactive Operation is Performed.
+                                   </div>';
+								}
+								unset($_SESSION['inactive']);
+								?>
+
+							</div>
+						</div>
+					</div>
 
                         <span class="label label-info pull-right"></span>
                     </div>
@@ -84,8 +118,9 @@
                                                 <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
                                                     Action <i class="fa fa-chevron-down"></i>
                                                 </button>
-                                                    <ul class="dropdown-menu slidedown">
-                                                        <li><a href="active-status.php?id=<?php echo $id;  ?>"><i class="fa fa-check-circle"></i> Active</a></li>
+                                                    <ul class="dropdown-menu slidedown">                                                        
+                                                        <li><a href="active-status.php?id=<?php echo $id;  ?>"><i class="fa fa-check-circle"></i> Active
+                                                    </a></li>
                                                         <li><a href="inactive-status.php?id=<?php echo $id;  ?>"><i class="fa fa-times-circle"></i> Inactive</a></li>
                                                     </ul>
                                                 
@@ -133,5 +168,18 @@
                 });
             }
         });
+    });
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    // Function to fade out the session alert after 3 seconds
+    function fadeOutSessionAlert() {
+        $('.alert').fadeOut(400);
+    }
+
+    // Trigger the fade-out function after 3 seconds
+    $(document).ready(function () {
+        setTimeout(fadeOutSessionAlert, 2000);
     });
 </script>

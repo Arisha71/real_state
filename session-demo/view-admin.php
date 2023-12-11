@@ -29,8 +29,8 @@ include("config.php");
                     <div class="col-lg-12">
                         <div class="panel panel-default">
                             <form class="form-horizontal form-border">
-                                <div class="panel-heading fa fa-user fa-lg">
-                                    Admin Details
+                                <div class="panel-heading">
+                                  <i class="fa fa-user fa-lg" > </i> <strong>Admin Details</strong> 
                                 </div>
                                 <table class="table table-striped" id="dataTable">
                                     <thead>
@@ -50,9 +50,6 @@ include("config.php");
                                                 $id = $row['id'];
                                                 $username = $row['username'];
                                                 $admin_email = $row['email'];
-                                                $password = $row['password'];
-                                                $admin_mobile = $row['mobile'];
-                                                $usertype = $row['usertype'];
                                                 $admin_pic = $row['photo'];
                                         ?>
                                                 <!-- show data in the rows -->
@@ -62,7 +59,7 @@ include("config.php");
                                                     <td><?php echo $admin_email; ?></td>
 
                                                     <td>
-                                                        <a href='delete-admin.php?id=<?php echo $id; ?>'><button class="btn btn-danger"> Delete</button></a>
+													<a href="delete-admin.php?id=<?php echo $id;  ?>"><i class="fa fa-trash-o fa-lg"></i><strong>Delete</strong> </a>
                                                     </td>
                                                 </tr>
                                         <?php }

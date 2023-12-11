@@ -7,7 +7,7 @@
 	<?php include("./include/linked-files.html"); ?>
 </head>
 <body class="overflow-hidden">
-	<?php include("./include/top-nav.php"); ?>
+	<?php  //include("./include/top-nav.php"); ?>
 	<div id="wrapper" class="preload">
 		<?php include("./include/side-bar.php"); ?>
 		<div id="main-container">

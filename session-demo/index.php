@@ -76,22 +76,17 @@ if (isset($_POST['login'])) {
 	if ($result) {
 		if (mysqli_num_rows($result) > 0) {
 			$row = mysqli_fetch_assoc($result);
-			if ($admin_password == $row['password']) {
+			if ($admin_password == $row['password']) 
 
-				$userinfo = array();
-				$userinfo['id'] = $row['id'];
-				$userinfo['name'] = $row['username'];
-				$userinfo['email'] = $row['email'];
-				$userinfo['password'] = $row['password'];
-				$userinfo['mobile'] = $row['mobile'];
-				$userinfo['usertype'] = $row['usertype'];
-				$userinfo['profile_picture'] = $row['photo'];
+                session_start(); 
+				$_SESSION['email'] = $row['email'];
+				$_SESSION['name'] = $row['username'];
+				$_SESSION['usertype'] = $row['usertype'];
+				$_SESSION['image'] = $row['photo'];
+				$_SESSION['password'] = $row['password'];
 
-				session_start();
-				$_SESSION['uinfo'] = $userinfo;
-
-				$_SESSION['user'] = $row['username'];
-
+				//$_SESSION['name'] = $row['username'];
+ 
 				// echo "<script>alert('Ok')
 				// window.location.href= home.php;
 				// </script>";
@@ -102,8 +97,8 @@ if (isset($_POST['login'])) {
 			</script>";
 			}
 		}
-	} else {
-		echo    "<script>alert('Error Running  Query')</script>";
-	}
-}
+	 } 
+	// else {
+	// 	echo    "<script>alert('Error Running  Query')</script>";
+	// }
 ?>

@@ -1,4 +1,4 @@
-<?php // session_start(); ?>
+<?php  session_start(); ?>
 <?php  	include('config.php'); ?>
 <?php
 //create query 
@@ -23,15 +23,24 @@
  
 	//encryption method ny md5..... 
 	// $enc = md5($admin_username);
+
+    // for the validation that email is already exist or not...
+$sql = "SELECT * FROM admin WHERE email = '$admin_email'";
+$result  = mysqli_query($cn,$sql);
+$present = mysqli_num_rows($result);
+if($present>0){
+    $_SESSION['email_alert'] = "This Email is already exist...";
+    header("Location:admin.php");
+}
+ else{
 //insert query
 $add_admin_query = mysqli_query($cn,"INSERT INTO admin (username, email, password ,mobile,usertype,photo)
 VALUES('$admin_username','$admin_email','$admin_Password', '$admin_mobile','$admin_usertype','$photo_dir')");
-
-if($add_admin_query){
-    header("Location:profile.php");
-}
-else{
-	echo mysqli_error($cn);	
+    $_SESSION['data_insert'] = "Data has been inserted...";
+    if($result){
+        header("Location:profile.php");
+    }
+   
 }
 }
 ?>

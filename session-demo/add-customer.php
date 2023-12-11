@@ -14,11 +14,12 @@
 					<div class="panel panel-default">
 						<form action="fir-add-queries.php" method="post" enctype="multipart/form-data">
 							<div class="panel-heading ">
-								<i class="fa fa-user fa-lg"></i> <strong> Customer  Details</strong>
-							</div>
+							
 							<div class="row">
-								<div class="col-md-2"></div>
-								<div class="col-md-8">
+								<div class="col-md-6">
+									<strong><i  class="fa fa-user fa-lg"></i> Customer Details</strong>
+								</div>
+								<div class="col-md-6">
 									<?php
 									if(session_status() ==PHP_SESSION_NONE){
                                       session_start();
@@ -34,19 +35,19 @@
 									?>
 								</div>
 							</div>
-
+						</div>
 							<div class="panel-body">
 								<div class="row">
 									<div class="col-md-3">
 										<div class="form-group">
 											<label class="control-label">Name <font style="color: red;"> * </font></label>
-											<input type="text" name="name" id="name" onkeyup="text()" placeholder="Enter here" class="form-control input-sm" required>
+											<input type="text" name="name" id="name" onkeyup="this.value = this.value.toUpperCase();" placeholder="Enter here" class="form-control input-sm" required>
 										</div>
 									</div><!-- /.col -->
 									<div class="col-md-3">
 										<div class="form-group">
 											<label class="control-label">Father name <font style="color: red;"> * </font></label>
-											<input type="text" placeholder="Enter here" id="fname" onkeyup="text()" name="fname" class="form-control input-sm" required>
+											<input type="text" placeholder="Enter here" id="fname" onkeyup="this.value = this.value.toUpperCase();" name="fname" class="form-control input-sm" required>
 										</div>
 									</div><!-- /.col -->
 									<div class="col-md-3">
@@ -64,7 +65,7 @@
 									<div class="col-md-12">
 										<div class="form-group">
 											<label class="control-label"> Address (optional)</label>
-											<input type="text" placeholder="Enter here" onkeyup="text()" name="address" class="form-control input-sm">
+											<input type="text" placeholder="Enter here" onkeyup="this.value = this.value.toUpperCase();" name="address" class="form-control input-sm">
 										</div>
 									</div><!-- /.col -->
 								</div><!-- /.row -->
@@ -170,15 +171,27 @@
 	document.getElementById('amountPaid').addEventListener('input', remainig);
 
 
-	// function to write text in uppercase
-	function text() {
-		var name = document.getElementById('name').value;
-		var fname = document.getElementById('fname').value;
+	// // function to write text in uppercase
+	// function text() {
+	// 	var name = document.getElementById('name').value;
+	// 	var fname = document.getElementById('fname').value;
 
-		var upperName = name.toUpperCase();
-		var upperFname = fname.toUpperCase();
+	// 	var upperName = name.toUpperCase();
+	// 	var upperFname = fname.toUpperCase();
 
-		document.getElementById('name').value = upperName;
-		document.getElementById('fname').value = upperFname;
-	}
+	// 	document.getElementById('name').value = upperName;
+	// 	document.getElementById('fname').value = upperFname;
+	// }
+</script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    // Function to fade out the session alert after 3 seconds
+    function fadeOutSessionAlert() {
+        $('.alert').fadeOut(400);
+    }
+
+    // Trigger the fade-out function after 3 seconds
+    $(document).ready(function () {
+        setTimeout(fadeOutSessionAlert, 2000);
+    });
 </script>
