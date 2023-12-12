@@ -61,8 +61,8 @@
                     </a>
                 </li>
 
-                <li class="openable">
-                    <a href="index.html#">
+                <li class="openable open">
+                    <a href="customer">
                         <span class="menu-icon">
                             <i class="fa fa-user fa-lg"></i>
                         </span>
@@ -76,17 +76,7 @@
                         <li><a href="view-customer.php"><span class="submenu-label"><i class="fa fa-eye fa-lg"></i> View Customer</span></a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="search-filter.php">
-                        <span class="menu-icon">
-                            <i class="fa fa-search fa-lg"></i>
-                        </span>
-                        <span class="text">
-                        Search Customer 
-                        </span>
-                        <span class="menu-hover"></span>
-                    </a>
-                </li>
+
                 <li>
                     <a href="payments.php">
                         <span class="menu-icon">

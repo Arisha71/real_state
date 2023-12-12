@@ -30,7 +30,40 @@ include("config.php");
                         <div class="panel panel-default">
                             <form class="form-horizontal form-border">
                                 <div class="panel-heading">
-                                  <i class="fa fa-user fa-lg" > </i> <strong>Admin Details</strong> 
+                                <div class="row">
+								<div class="col-md-6">
+									<strong><i  class="fa fa-user fa-lg"></i> Admin Details</strong>
+								</div>
+								<div class="col-md-6">
+									<?php
+									if(session_status() ==PHP_SESSION_NONE){
+                                      session_start();
+									}
+									if (isset($_SESSION['status'])) {
+										$msg = $_SESSION['status'];
+										echo "<div class='alert alert-success alert-dismissible'>
+										<button type='button' class='close'fade-out data-dismiss='alert'>&times;</button>
+										<strong>Message!</strong> $msg
+									  </div>";
+									}
+									unset($_SESSION['status']);
+									?>
+
+<?php
+									if(session_status() ==PHP_SESSION_NONE){
+                                      session_start();
+									}
+									if (isset($_SESSION['statuss'])) {
+										$msg = $_SESSION['statuss'];
+										echo "<div class='alert alert-danger alert-dismissible'>
+										<button type='button' class='close'fade-out data-dismiss='alert'>&times;</button>
+										<strong>Message!</strong> $msg
+									  </div>";
+									}
+									unset($_SESSION['statuss']);
+									?>
+								</div>
+							</div>
                                 </div>
                                 <table class="table table-striped" id="dataTable">
                                     <thead>
@@ -76,7 +109,18 @@ include("config.php");
 
     </div><!-- /wrapper -->
     <a href="blank.html" id="scroll-to-top" class="hidden-print"><i class="fa fa-chevron-up"></i></a>
-
 </body>
-
 </html>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    // Function to fade out the session alert after 3 seconds
+    function fadeOutSessionAlert() {
+        $('.alert').fadeOut(400);
+    }
+
+    // Trigger the fade-out function after 3 seconds
+    $(document).ready(function () {
+        setTimeout(fadeOutSessionAlert, 2000);
+    });
+</script>

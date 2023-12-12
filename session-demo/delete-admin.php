@@ -23,16 +23,17 @@ if ($count_result) {
 
         // Check if the delete query was successful
         if ($delete_result) {
-            echo '<script>alert( "Data delete successfully.")
-            window.location.href = "view-admin.php";
-            </script>';
+            session_start();
+           $_SESSION['status'] = 'Data has been deleted successfully';
+           header("Location:view-admin.php");
+
         } else {
             echo "Error deleting admin entry: " . mysqli_error($cn);
         }
     } else {
-        echo '<script>alert( "Cannot delete the last admin entry. At least one admin entry must remain.")
-        window.location.href = "view-admin.php";
-        </script>';
+        session_start();
+        $_SESSION['statuss'] = 'Cannot delete the last admin entry. At least one admin entry must remain.';
+        header("Location:view-admin.php");
     }
 
     // Free the result set
@@ -40,8 +41,7 @@ if ($count_result) {
 } else {
     echo "Error counting admin profiles: " . mysqli_error($cn);
 }
-
 // Close the database connection
 mysqli_close($cn);
-
 ?>
+
