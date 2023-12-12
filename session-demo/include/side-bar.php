@@ -103,17 +103,20 @@ function searchCustomers() {
     var searchInput = document.getElementById("search-input").value;
 
     // Check if the searchInput is empty
-    if (searchInput.trim()== "") {
+    if (searchInput.trim() === "") {
         alert("Please enter any customer ID.");
-        window.location.href="home.php";
-    } 
-    // else if (searchInput.trim() !== 'search-input') {
-    //     alert("You entered the wrong ID. Please try again.");
-    // }
-    else {
+        window.location.href = "home.php";
+    } else if (!isValidId(searchInput)) {
+        alert("You entered an invalid ID. Please enter a valid customer ID.");
+    } else {
         // Redirect to the search page with the search query
         window.location.href = "customer-info-display.php?customer_id=" + searchInput;
     }
+}
 
+function isValidId(id) {
+    // You can implement your own logic to check if the provided ID is valid
+    // For example, you can check if it's a numeric value or meets specific criteria
+    return /^\d+$/.test(id);
 }
 </script>
