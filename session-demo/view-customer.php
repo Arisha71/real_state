@@ -25,41 +25,41 @@
             <div class="padding-md">
                 <div class="panel panel-default table-responsive">
                     <div class="panel-heading ">
-                    <div class="panel-heading">
-						<div class="row">
-							<div class="col-md-6">
-								<i class="fa fa-eye fa-lg"></i> <strong> View Customer</strong>
-                            						</div>
-							<div class="col-md-6">
-								<?php
-								if (session_status() == PHP_SESSION_NONE) {
-									session_start();
-								}
-								if (isset($_SESSION['status']) && $_SESSION['status'] == true) {
-									echo '<div class="alert alert-success alert-dismissible">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <i class="fa fa-eye fa-lg"></i> <strong> View Customer</strong>
+                                </div>
+                                <div class="col-md-6">
+                                    <?php
+                                    if (session_status() == PHP_SESSION_NONE) {
+                                        session_start();
+                                    }
+                                    if (isset($_SESSION['status']) && $_SESSION['status'] == true) {
+                                        echo '<div class="alert alert-success alert-dismissible">
                                     <button type="button" class="close" data-dismiss="alert">&times;</button>
                                     <strong>Success!</strong> Active Operation is Performed.
                                     </div>';
-								}
-								unset($_SESSION['status']);
-								?>
+                                    }
+                                    unset($_SESSION['status']);
+                                    ?>
 
-								<?php
-								if (session_status() == PHP_SESSION_NONE) {
-									session_start();
-								}
-								if (isset($_SESSION['inactive']) && $_SESSION['inactive'] == true) {
-									echo '<div class="alert alert-warning alert-dismissible">
+                                    <?php
+                                    if (session_status() == PHP_SESSION_NONE) {
+                                        session_start();
+                                    }
+                                    if (isset($_SESSION['inactive']) && $_SESSION['inactive'] == true) {
+                                        echo '<div class="alert alert-warning alert-dismissible">
                                     <button type="button" class="close" data-dismiss="alert">&times;</button>
                                     <strong>Success!</strong> Inactive Operation is Performed.
                                    </div>';
-								}
-								unset($_SESSION['inactive']);
-								?>
+                                    }
+                                    unset($_SESSION['inactive']);
+                                    ?>
 
-							</div>
-						</div>
-					</div>
+                                </div>
+                            </div>
+                        </div>
 
                         <span class="label label-info pull-right"></span>
                     </div>
@@ -67,7 +67,7 @@
                         <table class="table table-striped" id="dataTable">
                             <thead>
                                 <tr>
-
+                                    <th>ID</th>
                                     <th>Name</th>
                                     <th>Father name</th>
                                     <th>Mobile</th>
@@ -98,33 +98,33 @@
                                 ?>
                                         <!-- show data in the rows -->
                                         <tr>
-                                        <td><a href="customer-info-display.php?customer_id=<?php echo $id; ?>"> <?php echo $name; ?> </a></td>
+                                        <td><?php echo "<span class='label label-success'>$id</span>";?></td>
+                                            <td><a href="customer-info-display.php?customer_id=<?php echo $id; ?>"> <?php echo $name; ?> </a></td>
                                             <td><?php echo $father_name; ?></td>
                                             <td><?php echo $mobile; ?></td>
                                             <td><?php echo $address; ?></td>
                                             <td><?php echo number_format($price); ?></td>
                                             <td>
-                                                <?php if( $status==1){
+                                                <?php if ($status == 1) {
                                                     echo "<span class='label label-success'>Active</span>";
-                                                } 
-                                                else{
+                                                } else {
                                                     echo "<span class='label label-warning'>Inactive</span>";
                                                 }
                                                 ?>
-                                            
+
                                             </td>
                                             <td>
-                                            <div class="btn-group pull-center">
-                                                <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-                                                    Action <i class="fa fa-chevron-down"></i>
-                                                </button>
-                                                    <ul class="dropdown-menu slidedown">                                                        
+                                                <div class="btn-group pull-center">
+                                                    <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                                        Action <i class="fa fa-chevron-down"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu slidedown">
                                                         <li><a href="active-status.php?id=<?php echo $id;  ?>"><i class="fa fa-check-circle"></i> Active
-                                                    </a></li>
+                                                            </a></li>
                                                         <li><a href="inactive-status.php?id=<?php echo $id;  ?>"><i class="fa fa-times-circle"></i> Inactive</a></li>
                                                     </ul>
-                                                
-                                            </div>
+
+                                                </div>
                                             </td>
                                         </tr>
                                 <?php }
@@ -179,7 +179,7 @@
     }
 
     // Trigger the fade-out function after 3 seconds
-    $(document).ready(function () {
+    $(document).ready(function() {
         setTimeout(fadeOutSessionAlert, 2000);
     });
 </script>

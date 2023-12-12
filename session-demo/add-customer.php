@@ -69,10 +69,6 @@
 										</div>
 									</div><!-- /.col -->
 								</div><!-- /.row -->
-								<div>
-									<h4 class="mb-4">Plot Details:</h4>
-									<hr>
-								</div>
 								<div class="row">
 									<div class="col-md-4">
 										<div class="form-group">

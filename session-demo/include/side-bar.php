@@ -62,7 +62,7 @@
                 </li>
 
                 <li class="openable open">
-                    <a href="customer">
+                    <a href="add-customer.php">
                         <span class="menu-icon">
                             <i class="fa fa-user fa-lg"></i>
                         </span>
