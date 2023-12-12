@@ -129,7 +129,7 @@
         </li>
         <li class="profile dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="blank.html#">
-                <strong><?php echo $_SESSION['name'];  ?></strong>
+                <strong><?php //echo $_SESSION['name']; ?></strong>
                 <span><i class="fa fa-chevron-down"></i></span>
             </a>
             <ul class="dropdown-menu">

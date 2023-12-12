@@ -79,10 +79,21 @@
                 <li>
                     <a href="search-filter.php">
                         <span class="menu-icon">
-                            <i class="fa fa-eye fa-lg"></i>
+                            <i class="fa fa-search fa-lg"></i>
                         </span>
                         <span class="text">
                         Search Customer 
+                        </span>
+                        <span class="menu-hover"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="payments.php">
+                        <span class="menu-icon">
+                            <i class="fa fa-credit-card fa-lg"></i>
+                        </span>
+                        <span class="text">
+                        payments
                         </span>
                         <span class="menu-hover"></span>
                     </a>
