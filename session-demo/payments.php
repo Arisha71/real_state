@@ -14,6 +14,18 @@
     <div id="wrapper" class="preload">
         <?php include("./include/side-bar.php"); ?>
         <div id="main-container">
+
+                                       <?php
+                                        $view_admin_qry = "SELECT * FROM property_selling";
+                                        $result = $cn->query($view_admin_qry);
+                                        if ($result->num_rows > 0) {
+                                            while ($row = $result->fetch_assoc()) {
+                                                // make variables and display in rows
+                                                $id = $row['id'];
+                                        ?>
+                                        <?php }
+                                        }  ?>
+
             <div class="padding-md">
                 <div class="row">
                     <div class="col-lg-12">
@@ -34,7 +46,7 @@
 
                                                 </div>
                                                 <div>
-                                                    <button class='btn btn-success' type='submit' name='search-customer'><i class="fa fa-search fa-lg"></i>Search Customer</button>
+                                                 <a href="view-customer.php?id=<?php echo $id;  ?>"><button class='btn btn-success' type='submit' name='search-customer'><i class="fa fa-search fa-lg"></i>Search Customer</button></a> 
 
                                                 </div>
                                             </div><!-- /.col -->
@@ -51,8 +63,7 @@
              include('config.php');
 
 
-            // $qry = "SELECT * FROM property_selling WHERE id='$get_id'";
-            // $result = mysqli_query($cn, $qry);
+            if(isset($_GET['id'])){
             $get_id = $_GET['id'];
             $view_students_qry = "SELECT * FROM property_selling WHERE id=$get_id";
             $result = $cn->query($view_students_qry);
@@ -70,6 +81,7 @@
                     
                 }
             }
+        }
             ?> 
 
             <div class="padding-md">
