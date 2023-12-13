@@ -111,7 +111,7 @@
 									</div><!-- /.col -->
 									<div class="col-md-4">
 										<div class="form-group">
-											<label class="control-label">Amount paied<font style="color: red;"> * </font></label>
+											<label class="control-label">Amount paid<font style="color: red;"> * </font></label>
 											<input type="number" placeholder="Enter here" id="amountPaid" oninput="remainig()" name="advance" class="form-control input-sm" required>
 										</div>
 									</div><!-- /.col -->
