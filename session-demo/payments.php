@@ -160,7 +160,7 @@
 <?php  
  if(isset($_POST['update-customer'])){
     $remaning = $_POST['remaning'];
-    $pay = $_POST['price'];
+    $pay= $_POST['price'];
   
 // update query 
 $update_qry = "UPDATE property_selling SET remaning= '$remaning', price = '$pay' WHERE id ='$get_customer_id'";
