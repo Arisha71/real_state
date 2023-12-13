@@ -52,8 +52,7 @@
         $get_customer_id = $_GET['customer_id']; //get data by id
         $qry = "SELECT * FROM property_selling WHERE id ='$get_customer_id'";
         $run = mysqli_query($cn,$qry);
-        if($run){
-          $row = mysqli_fetch_array($run);
+        while($row = mysqli_fetch_array($run)){
             ?>
       <div class="padding-md">
         <div class="row">
@@ -70,18 +69,18 @@
                     <div class="panel-body">
                         <div class="row">
                                 <div class="panel-body">
-                                <form action="">
+                                <form action="" method="post">
                                     <div class="row">
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label class="control-label">Name <span style="color: red;"> * </span></label>
-                                                <input type="text" name="name"  value="<?php echo $row['name'];  ?>" onkeyup="this.value = this.value.toUpperCase();" class="form-control input-sm" readonly>
+                                                <input type="text" name="name" id="name" value="<?php echo $row['name'];  ?>" onkeyup="this.value = this.value.toUpperCase();" class="form-control input-sm" readonly>
                                             </div>
                                         </div><!-- /.col -->
                                         <div class="col-md-3">
                                             <div class="form-group">
                                                 <label class="control-label">Father name <span style="color: red;"> * </span></label>
-                                                <input type="text"value="<?php echo $row['father_name'];  ?>" onkeyup="this.value = this.value.toUpperCase();" name="fname" class="form-control input-sm" readonly>
+                                                <input type="text" id="fname" value="<?php echo $row['father_name'];  ?>" onkeyup="this.value = this.value.toUpperCase();" name="fname" class="form-control input-sm" readonly>
                                             </div>
                                         </div><!-- /.col -->
                                         <div class="col-md-3">
@@ -131,12 +130,10 @@
                                         </div> -->
                                     </div><!-- /.row -->
                                     <div>
-                                        <button class='btn btn-success' type='submit' name='search-customer'><i class="fa fa-upload fa-lg"></i> Save Update</button>
-
+                                        <button class='btn btn-success' type='submit' name='update-customer'><i class="fa fa-upload fa-lg"></i> Save Update</button>
                                     </div>
                                     </form>
                                 </div>
-                            
                         </div><!-- /.row -->
                     </div><!-- /pannel body -->
                 </div><!-- /pannel default-->
@@ -146,41 +143,36 @@
             
             <?php
         }
-        else{
-            echo mysqli_error($cn);
-
-        }
     }
-
-    // // create select query.....
-    // $qry = "SELECT *  FROM property_selling WHERE id='$get_customer_id'";
-    // $result = mysqli_query($cn, $qry);
-    // $num_rows = mysqli_num_rows($result); //number of rows
-    // $rows = mysqli_fetch_array($result);
-
-    // //if data found then....
-    // if ($num_rows > 0) {
-
-    // 	$id = $rows['id'];
-    // 	$name = $rows['name'];
-    // 	$father_name = $rows['father_name'];
-    // 	$cnic = $rows['cnic'];
-    // 	$mobile = $rows['mobile'];
-    // 	$price = $rows['price'];
-    // 	$advance = $rows['advance'];
-    // 	$remaning = $rows['remaning'];
-    // 	$status = $rows['status'];
-    // } else {
-    // 	echo mysqli_error($cn);
-    // 	// header("Location:view-customer.php");
-    // }
     ?>
     
-  </div><!-- /main-container -->
+</div><!-- /main-container -->
 </div><!-- /wrapper -->
 
-    <?php include("./include/footer.html"); ?>
-    <a href="blank.html" id="scroll-to-top" class="hidden-print"><i class="fa fa-chevron-up"></i></a>
-
+ <?php include("./include/footer.html"); ?>
+ <a href="blank.html" id="scroll-to-top" class="hidden-print"><i class="fa fa-chevron-up"></i></a>
 </body>
 </html>
+
+<!------------------------------- update customer query --------------------->
+
+<?php  
+ if(isset($_POST['update-customer'])){
+    $remaning = $_POST['remaning'];
+    $pay = $_POST['price'];
+  
+// update query 
+$update_qry = "UPDATE property_selling SET remaning= '$remaning', price = '$pay' WHERE id ='$get_customer_id'";
+$result = mysqli_query($cn,$update_qry);
+if($result){
+echo '<script>alert("data has been uodated")</script>';
+} 
+else{
+  echo mysqli_error($cn);
+    //'<script>alert("data has not been uodated")</script>';
+   
+}
+
+    
+ }
+?>
