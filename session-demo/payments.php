@@ -33,6 +33,7 @@
                                                     <input type="text" placeholder="Enter here" name="customer_id" value="<?php // if(isset($_GET['customer_id'])){ echo $_GET('customer_id');}  ?>" class="form-control input-sm" required>
                                                 </div>
                                                 <div class="col-md-3">
+                                                    <br>
                                                     <button class='btn btn-success' name="search" type='submit'><i class="fa fa-search fa-lg"></i>Search Customer</button>
 
                                                 </div>
@@ -108,27 +109,27 @@
                                                 <input type="text" value="<?php echo $row['price'];  ?>" placeholder="Enter here" name="price" class="form-control input-sm">
                                             </div>
                                         </div><!-- /.col -->
-                                        <!-- <div class="col-md-3">
+                                        <div class="col-md-3">
                                             <div class="form-group">
                                                 <label class="control-label">Month <span style="color: red;"> * </span></label>
                                                 <select class="form-control">
                                                     <option value="-1">Select Month</option>
-                                                    <option value="Jan2023">Jan 2023</option>
-                                                    <option value="feb2023">Feb 2023</option>
-                                                    <option value="mar2023">Mar 2023</option>
-                                                    <option value="apr2023">Apr 2023</option>
-                                                    <option value="may2023">May 2023</option>
-                                                    <option value="jun2023">Jun 2023</option>
-                                                    <option value="Jul2023">Jul 2023</option>
-                                                    <option value="aug2023">Aug 2023</option>
-                                                    <option value="sep2023">Sep 2023</option>
-                                                    <option value="oct2023">Oct 2023</option>
-                                                    <option value="nov2023">Nov 2023</option>
-                                                    <option value="dec2023">Dec 2023</option>
+                                                    <option value="Jan">Jan </option>
+                                                    <option value="feb">Feb </option>
+                                                    <option value="mar">Mar </option>
+                                                    <option value="apr">Apr </option>
+                                                    <option value="may">May </option>
+                                                    <option value="jun">Jun </option>
+                                                    <option value="Jul">Jul </option>
+                                                    <option value="aug">Aug </option>
+                                                    <option value="sep">Sep </option>
+                                                    <option value="oct">Oct </option>
+                                                    <option value="nov">Nov </option>
+                                                    <option value="dec">Dec </option>
                                                 </select>
 
                                             </div>
-                                        </div> -->
+                                        </div>
                                     </div><!-- /.row -->
                                     <div>
                                         <button class='btn btn-success' type='submit' name='search-customer'><i class="fa fa-upload fa-lg"></i> Save Update</button>
