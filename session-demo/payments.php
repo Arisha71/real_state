@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Payments Details</title>
+    <title>Payments</title>
     <?php include("./include/linked-files.html"); ?>
 
 </head>

@@ -27,7 +27,7 @@
         <div class="user-block clearfix">
             <img src="<?php echo $photo;  ?>" alt="User Avatar not found">
             <div class="detail">
-                <strong><?php echo $username; ?></strong><span class="badge badge-danger bounceIn animation-delay4 m-left-xs">4</span>
+                <strong><?php echo $username; ?></strong><span class=" animation-delay4 m-left-xs"></span>
                 <ul class="list-inline">
                     <li><a href="profile.php">Profile</a></li>
                     <li><a href="inbox.html" class="no-margin">Inbox</a></li>

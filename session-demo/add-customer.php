@@ -1,7 +1,7 @@
 <?php include("auth.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
-<title>Customer</title>
+<title>Customer Details</title>
 <?php include("./include/linked-files.html"); ?>
 
 <div id="wrapper" class="preload">
@@ -17,7 +17,7 @@
 
 								<div class="row">
 									<div class="col-md-6">
-										<strong><i class="fa fa-user fa-lg"></i> Customer Details</strong>
+										<strong><i class="fa fa-plus-circle fa-lg"></i> Customer Details</strong>
 									</div>
 									<div class="col-md-6">
 										<?php
@@ -131,7 +131,7 @@
 									</div>
 								</div>
 								<div class="panel-footer text-right">
-									<button class='btn btn-success' type='submit' name='add-customer'><i class="fa fa-plus fa-lg"></i> Add & Submit</button>
+									<button class='btn btn-success' type='submit' name='add-customer'><i class="fa fa-plus fa-lg"></i> Submit</button>
 
 									<!-- <button class="btn btn-success fa fa-retweet" type="reset"> Clear</button> -->
 								</div>
