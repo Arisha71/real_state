@@ -1,7 +1,7 @@
 <?php include("auth.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
-<title>Admin Details</title>
+<title>Admin</title>
 <?php include("./include/linked-files.html"); ?>
 <div id="wrapper" class="preload">
     <?php include("./include/top-nav.php"); ?>
@@ -24,7 +24,7 @@
                             <div class="panel-heading">
 							
                             <div class="row">
-								<div class="col-md-6"><i class="fa fa-user fa-lg"></i> <strong>Admin</strong> </div>
+								<div class="col-md-6"><i class="fa fa-plus-circle fa-lg"></i> <strong>Admin</strong> </div>
 								<div class="col-md-6">
 									<?php
 									if(session_status() ==PHP_SESSION_NONE){
@@ -81,9 +81,9 @@
                                     </div><!-- /.col -->
                                 </div><!-- /form-group -->
                                 <div class="form-group">
-                                    <label class="control-label col-md-2">User type</label>
+                                    <label class="control-label col-md-2 input-sm">User type</label>
                                     <div class="col-md-10">
-                                        <select name="usertype" id="" class="form-control">
+                                        <select name="usertype" id="" class="form-control input-sm">
                                             <option value="-1">--Select User--</option>
                                             <option value="admin" name="admin">Admin</option>
                                             <option value="user" name="user">User</option>
@@ -100,7 +100,7 @@
                             </div>
                             <div class="panel-footer">
                                 <div class="text-right">
-                               <button class="btn btn-success" type="submit" name="add-admin"><i class=" fa fa-plus "></i> Add & Submit
+                               <button class="btn btn-success input-sm" type="submit" name="add-admin"><i class=" fa fa-plus "></i> Submit
                                 </button>
                                     <!-- <button class="btn btn-sm btn-success" type="reset">Reset</button> -->
                                 </div>

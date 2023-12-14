@@ -4,7 +4,7 @@
 
 <head>
 
-	<title>View Admin Details</title>
+	<title>Admin Profile</title>
 	<?php include("./include/linked-files.html"); ?>
 	<!--================----==================-->
 	<style>

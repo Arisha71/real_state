@@ -38,7 +38,7 @@ $mydate = getdate(date("U"));
 			<div class="panel panel-default panel-stat2 bg-success">
 				<div class="panel-body">
 					<span class="stat-icon">
-						<i class="fa fa-bar-chart-o"></i>
+						<i class="fa fa-home"></i>
 					</span>
 
 

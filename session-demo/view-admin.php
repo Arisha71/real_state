@@ -5,7 +5,7 @@ include("config.php");
 <html lang="en">
 
 <head>
-    <title>View Admin Details</title>
+    <title>Admin Details</title>
     <?php include("./include/linked-files.html"); ?>
 
 </head>
@@ -32,7 +32,7 @@ include("config.php");
                                 <div class="panel-heading">
                                 <div class="row">
 								<div class="col-md-6">
-									<strong><i  class="fa fa-user fa-lg"></i> Admin Details</strong>
+									<strong><i  class="fa fa-eye fa-lg"></i> Admin Details</strong>
 								</div>
 								<div class="col-md-6">
 									<?php
