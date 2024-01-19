@@ -105,7 +105,7 @@
                                                         <div class="col-md-3">
                                                             <div class="form-group">
                                                                 <label class="control-label">Pay<span style="color: red;"> * </span></label>
-                                                                <input type="text" value="<?php echo $row['price']; ?>" placeholder="Enter here" name="price" class="form-control input-sm" required>
+                                                                <input type="text" value="<?php echo $row['price']; ?>" placeholder="Enter here" id="amountPaid" oninput="pay()" name="pay" class="form-control input-sm" required>
                                                             </div>
                                                         </div><!-- /.col -->
                                                         <div class="col-md-3">
@@ -165,6 +165,39 @@
 </body>
 
 </html>
+<script>
+	// Function to calculate the remaining amount
+	function remainig() {
+		let totalAmount = document.getElementById('totalAmount').value;
+		let advance = document.getElementById('amountPaid').value;
+		document.getElementById('remainingAmount').value = (totalAmount - advance);
+	}
+	// Attach event listeners to the input fields
+	document.getElementById('totalAmount').addEventListener('input', remainig);
+	document.getElementById('amountPaid').addEventListener('input', remainig);
+
+	// function to write text in uppercase
+	function text() {
+		var name = document.getElementById('name').value;
+		var fname = document.getElementById('fname').value;
+
+		var upperName = name.toUpperCase();
+		var upperFname = fname.toUpperCase();
+
+		document.getElementById('name').value = upperName;
+		document.getElementById('fname').value = upperFname;
+	}
+
+	
+
+	
+
+	
+
+	// Calculate dues per month and display the result directly
+	var duesPerMonth = totalMonths > 0 ? Math.floor(remaining / totalMonths) : 0;
+	document.getElementById('dues-per-month').value = duesPerMonth.toFixed(2);
+</script>
 
 <!------------------------------- update customer query --------------------->
 
