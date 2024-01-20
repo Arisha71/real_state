@@ -105,13 +105,13 @@
                                                         <div class="col-md-3">
                                                             <div class="form-group">
                                                                 <label class="control-label">Pay<span style="color: red;"> * </span></label>
-                                                                <input type="text" value="<?php echo $row['price']; ?>" placeholder="Enter here" id="amountPaid" oninput="pay()" name="pay" class="form-control input-sm" required>
+                                                                <input type="text" value="<?php echo $row['price']; ?>" placeholder="Enter here" id="amountPay" oninput="decrementAmount()" name="pay" class="form-control input-sm" required>
                                                             </div>
                                                         </div><!-- /.col -->
                                                         <div class="col-md-3">
-                                                            <div class="form-group" required>
-                                                                <label class="control-label">Month <span style="color: red;"> * </span></label>
-                                                                <select class="form-control input-sm" required >
+                                                            <div class="form-group">
+                                                                <label class="control-label" required >Month <span style="color: red;"> * </span></label>
+                                                                <select class="form-control input-sm">
                                                                     <option value="-1">Select Month</option>
                                                                     <option value="Jan">January</option>
                                                                     <option value="feb">February</option>
@@ -130,8 +130,8 @@
                                                         </div>
                                                         <div class="col-md-3">
                                                         <div class="form-group">
-                                                                    <label class="control-label" required>Year<span style="color: red;"> * </span></label>
-                                                                    <select class="form-control input-sm">
+                                                                    <label class="control-label" required >Year<span style="color: red;"> * </span></label>
+                                                                    <select class="form-control input-sm" required>
                                                                         <option value="-1">Select Year</option>
                                                                         <option value="2023" name="2023">2023</option>
                                                                         <option value="2024" name="2024">2024</option>
@@ -165,40 +165,40 @@
 </body>
 
 </html>
-<script>
-	// Function to calculate the remaining amount
-	function remainig() {
-		let totalAmount = document.getElementById('totalAmount').value;
-		let advance = document.getElementById('amountPaid').value;
-		document.getElementById('remainingAmount').value = (totalAmount - advance);
-	}
-	// Attach event listeners to the input fields
-	document.getElementById('totalAmount').addEventListener('input', remainig);
-	document.getElementById('amountPaid').addEventListener('input', remainig);
+ <script>
+    function decrementAmount() {
+      // Get paid amount, remaining amount, and payment amount
+      var paidAmountElement = document.getElementById("paidAmount");
+      var remainingAmountElement = document.getElementById("remainingAmount");
+      var paymentAmountElement = document.getElementById("paymentAmount");
 
-	// function to write text in uppercase
-	function text() {
-		var name = document.getElementById('name').value;
-		var fname = document.getElementById('fname').value;
+      var paidAmount = parseFloat(paidAmountElement.innerText);
+      var remainingAmount = parseFloat(remainingAmountElement.innerText);
+      var paymentAmount = parseFloat(paymentAmountElement.value);
 
-		var upperName = name.toUpperCase();
-		var upperFname = fname.toUpperCase();
+      // Check if payment amount is valid
+      if (isNaN(paymentAmount) || paymentAmount <= 0) {
+        alert("Please enter a valid payment amount.");
+        return;
+      }
 
-		document.getElementById('name').value = upperName;
-		document.getElementById('fname').value = upperFname;
-	}
+      // Check if remaining amount is sufficient
+      if (paymentAmount > remainingAmount) {
+        alert("Payment amount exceeds remaining amount.");
+        return;
+      }
 
-	
+      // Increment the paid amount and decrement the remaining amount
+      var newPaidAmount = paidAmount + paymentAmount;
+      var newRemainingAmount = remainingAmount - paymentAmount;
 
-	
+      paidAmountElement.innerText = newPaidAmount;
+      remainingAmountElement.innerText = newRemainingAmount;
 
-	
-
-	// Calculate dues per month and display the result directly
-	var duesPerMonth = totalMonths > 0 ? Math.floor(remaining / totalMonths) : 0;
-	document.getElementById('dues-per-month').value = duesPerMonth.toFixed(2);
-</script>
-
+      // You can perform additional actions here, such as updating a database or displaying a success message.
+      alert("Payment successful. Paid amount: " + newPaidAmount + ", Remaining amount: " + newRemainingAmount);
+    }
+  </script>
 <!------------------------------- update customer query --------------------->
 
 <?php
@@ -210,7 +210,7 @@ if (isset($_POST['update-customer'])) {
     $update_qry = "UPDATE property_selling SET remaning= '$remaning', price = '$pay' WHERE id ='$get_customer_id'";
     $result = mysqli_query($cn, $update_qry);
     if ($result) {
-        echo '<script>alert("data has been uodated")</script>';
+        //echo '<script>alert("data has been uodated")</script>';
     } else {
         echo mysqli_error($cn);
         //'<script>alert("data has not been uodated")</script>';
