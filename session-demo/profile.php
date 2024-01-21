@@ -116,114 +116,124 @@
 								<div class="row">
 									<div class="col-md-10">
 										<div class="panel panel-default fadeInDown animation-delay2">
-										<div class="panel-heading">
-							
-                            <div class="row">
-								<div class="col-md-6"><i class="fa fa-user fa-lg"></i> <strong>About Me</strong> </div>
-								<div class="col-md-6">
-                                    <?php
-									if(session_status() ==PHP_SESSION_NONE){
-                                      session_start();
-									}
-									if (isset($_SESSION['data_insert'])) {
-										$msg = $_SESSION['data_insert'];
-										echo "<div class='alert alert-success alert-dismissible'>
+											<div class="panel-heading">
+
+												<div class="row">
+													<div class="col-md-6"><i class="fa fa-user fa-lg"></i> <strong>About Me</strong> </div>
+													<div class="col-md-6">
+														<?php
+														if (session_status() == PHP_SESSION_NONE) {
+															session_start();
+														}
+														if (isset($_SESSION['data_insert'])) {
+															$msg = $_SESSION['data_insert'];
+															echo "<div class='alert alert-success alert-dismissible'>
 										<button type='button' class='close'fade-out data-dismiss='alert'>&times;</button>
 										<strong>Message!</strong> $msg
 									  </div>";
-									}
-									unset($_SESSION['data_insert']);
-									?>
-								</div>
-                            </div>
-                            </div> 
-										
-										<div class="panel-body">
-											<div class="view-content">
-												<div>
-													<h4>Username</h4>
-													<?php echo $username; ?>
-												</div>
-												<div>
-													<h4>Mobile</h4>
-													<?php echo $mobile; ?>
-												</div>
-												<div>
-													<h4>Status</h4>
-													Online
-												</div>
-												<div>
-													<h4>Role</h4>
-													<?php echo $usertype;  ?>
+														}
+														unset($_SESSION['data_insert']);
+														?>
+													</div>
 												</div>
 											</div>
+
+											<div class="panel-body">
+												<div class="view-content">
+													<div>
+														<h4>Username</h4>
+														<strong><?php echo $username; ?> </strong>
+													</div>
+													<div>
+														<h4>Mobile</h4>
+														<strong><?php echo $mobile; ?> </strong>
+													</div>
+													<div>
+														<h4>Status</h4>
+														<strong>Online <i class="fa fa-rss "></i> </strong>
+													</div>
+													<div>
+														<h4>Role</h4>
+														<i class="fa fa-user"></i> <strong><?php if ($_SESSION['usertype'] == 1) {	echo "Admin";} else {echo "User";} ?> </strong>
+																				
+													</div>
+												</div>
+											</div>
+										</div><!-- /panel -->
+									</div><!-- /.col -->
+
+								</div><!-- /.row -->
+							</div><!-- /tab1 -->
+
+							<div class="tab-pane fade" id="edit">
+								<div class="panel panel-default">
+									<form class="form-horizontal form-border" action="fir-admin-update.php" method="post">
+										<div class="panel-heading">
+											<i class="fa fa-edit fa-lg"></i> <strong> Edit your profile </strong><input type="hidden" name="admin-edit-page-id" value='<?php echo $id; ?>'>
 										</div>
-									</div><!-- /panel -->
-								</div><!-- /.col -->
+										<div class="panel-body">
+											<div class="form-group">
+												<label class="control-label col-md-2">Username</label>
+												<div class="col-md-10">
+													<input type="text" class="form-control input-sm" value='<?php echo $username; ?>' name="username">
+												</div><!-- /.col -->
+											</div><!-- /form-group -->
+											<div class="form-group">
+												<label class="control-label col-md-2">Email</label>
+												<div class="col-md-10">
+													<input type="text" class="form-control input-sm" value='<?php echo $email; ?>' name="email" readonly>
+												</div><!-- /.col -->
+											</div><!-- /form-group -->
+											<div class="form-group">
+												<label class="control-label col-md-2">Password</label>
+												<div class="col-md-10">
+													<input type="password" class="form-control input-sm" value='<?php echo $_SESSION['password']; ?>' name="Password">
+												</div><!-- /.col -->
+											</div><!-- /form-group -->
+											<div class="form-group">
+												<label class="control-label col-md-2">Mobile</label>
+												<div class="col-md-10">
+													<input type="text" data-inputmask="'mask' :'0399-9999999'" placeholder="xxxx-xxxxxxx" maxlength="12" class="form-control input-sm" value='<?php echo $mobile; ?>' name="mobile">
+												</div><!-- /.col -->
+											</div><!-- /form-group -->
+											<div class="form-group">
+												<label class="control-label col-md-2">User type</label>
+												<div class="col-md-10">
+													<select type="text" class="form-control input-sm" value='<?php if ($_SESSION['usertype'] == 0) {
+																													echo "disabled";
+																												} ?>' name="utype">
+														<option value="admin" <?php if ($_SESSION['usertype'] == 1) {
+																					echo "selected";
+																				} ?>>Admin</option>
+														<option value="user" <?php if ($_SESSION['usertype'] == 0) {
+																					echo "selected";
+																				} ?>>User</option>
+													</select>
+												</div><!-- /.col -->
+											</div><!-- /form-group -->
+											<div class="form-group">
+												<label class=" control-label col-md-2">Photo(100Kb)</label>
+												<div class="col-lg-10">
+													<input type="file" name="photo" class="form-control input-sm" value='<?php echo $photo; ?>'>
+												</div><!-- /.col -->
+											</div><!-- /form-group -->
 
-							</div><!-- /.row -->
-					</div><!-- /tab1 -->
+										</div>
+										<div class="panel-footer">
+											<div class="text-right">
+												<button class="btn btn-sm btn-success" type="submit" name="edit-admin"><i class="fa fa-plus fa-lg"></i> Edit admin</button>
+												<button class="btn btn-sm btn-success" type="reset"><i class="fa fa-retweet fa-lg"></i>Reset</button>
+											</div>
+										</div>
+									</form>
+								</div><!-- /panel -->
+							</div><!-- /tab2 -->
 
-					<div class="tab-pane fade" id="edit">
-						<div class="panel panel-default">
-							<form class="form-horizontal form-border" action="fir-admin-update.php" method="post">
-								<div class="panel-heading">
-									<i class="fa fa-user fa-lg"></i> <strong> Admin Information </strong><input type="hidden" name="admin-edit-page-id" value='<?php echo $id; ?>'>
-								</div>
-								<div class="panel-body">
-									<div class="form-group">
-										<label class="control-label col-md-2">Username</label>
-										<div class="col-md-10">
-											<input type="text" class="form-control input-sm" value='<?php echo $username; ?>' name="username">
-										</div><!-- /.col -->
-									</div><!-- /form-group -->
-									<div class="form-group">
-										<label class="control-label col-md-2">Email</label>
-										<div class="col-md-10">
-											<input type="text" class="form-control input-sm" value='<?php echo $email; ?>' name="email" readonly>
-										</div><!-- /.col -->
-									</div><!-- /form-group -->
-									<div class="form-group">
-										<label class="control-label col-md-2">Password</label>
-										<div class="col-md-10">
-											<input type="password" class="form-control input-sm" value='<?php echo $password; ?>' name="Password">
-										</div><!-- /.col -->
-									</div><!-- /form-group -->
-									<div class="form-group">
-										<label class="control-label col-md-2">Mobile</label>
-										<div class="col-md-10">
-											<input type="text" data-inputmask="'mask' :'0399-9999999'" placeholder="xxxx-xxxxxxx" maxlength="12" class="form-control input-sm" value='<?php echo $mobile; ?>' name="mobile">
-										</div><!-- /.col -->
-									</div><!-- /form-group -->
-									<div class="form-group">
-										<label class="control-label col-md-2">User type</label>
-										<div class="col-md-10">
-											<input type="text" class="form-control input-sm" value='<?php echo $usertype; ?>' name="utype">
-										</div><!-- /.col -->
-									</div><!-- /form-group -->
-									<div class="form-group">
-										<label class=" control-label col-md-2">Photo</label>
-										<div class="col-lg-10">
-											<input type="file" name="photo" value='<?php echo $photo; ?>'>
-										</div><!-- /.col -->
-									</div><!-- /form-group -->
-
-								</div>
-								<div class="panel-footer">
-									<div class="text-right">
-										<button class="btn btn-sm btn-success" type="submit" name="edit-admin"><i class="fa fa-plus fa-lg"></i> Edit admin</button>
-										<button class="btn btn-sm btn-success" type="reset"><i class="fa fa-retweet fa-lg"></i>Reset</button>
-									</div>
-								</div>
-							</form>
-						</div><!-- /panel -->
-					</div><!-- /tab2 -->
-
-				</div><!-- /tab3 -->
-				</di><!-- /tab-content -->
-			</div><!-- /.col -->
-		</div><!-- /.row -->
-	</div><!-- /.padding-md -->
+					</div><!-- /tab3 -->
+					</di><!-- /tab-content -->
+				</div><!-- /.col -->
+			</div><!-- /.row -->
+		</div><!-- /.padding-md -->
 	</div><!-- /main-container -->
 	</div><!-- /wrapper -->
 

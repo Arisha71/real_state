@@ -210,10 +210,10 @@ if (isset($_POST['update-customer'])) {
     $update_qry = "UPDATE property_selling SET remaning= '$remaning', price = '$pay' WHERE id ='$get_customer_id'";
     $result = mysqli_query($cn, $update_qry);
     if ($result) {
-        //echo '<script>alert("data has been uodated")</script>';
+       echo '<script>alert("data has been uodated")</script>';
     } else {
         echo mysqli_error($cn);
-        //'<script>alert("data has not been uodated")</script>';
+       '<script>alert("data has not been uodated")</script>';
 
     }
 }

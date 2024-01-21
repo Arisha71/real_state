@@ -24,7 +24,7 @@
                             <div class="panel-heading">
 							
                             <div class="row">
-								<div class="col-md-6"><i class="fa fa-plus-circle fa-lg"></i> <strong>Admin</strong> </div>
+								<div class="col-md-6"><i class="fa fa-plus-circle fa-lg"></i> <strong>Add New Admin</strong> </div>
 								<div class="col-md-6">
 									<?php
 									if(session_status() ==PHP_SESSION_NONE){
@@ -83,17 +83,16 @@
                                 <div class="form-group">
                                     <label class="control-label col-md-2 input-sm">User type</label>
                                     <div class="col-md-10">
-                                        <select name="usertype" id="" class="form-control input-sm">
-                                            <option value="-1">--Select User--</option>
-                                            <option value="admin" name="admin">Admin</option>
-                                            <option value="user" name="user">User</option>
+                                        <select name="usertype" class="form-control input-sm">
+                                            <option value="1" >Admin</option>
+                                            <option value="0" >User</option>
                                         </select>
                                     </div><!-- /.col -->
                                 </div><!-- /form-group -->
                                 <div class="form-group">
-                                    <label class=" control-label col-md-2">Photo</label>
+                                    <label class=" control-label col-md-2">Photo (100Kb)</label>
                                     <div class="col-lg-10">
-                                        <input type="file" name="photo">
+                                        <input type="file" class="form-control input-sm" name="photo" required>
                                     </div><!-- /.col -->
                                 </div><!-- /form-group -->
 

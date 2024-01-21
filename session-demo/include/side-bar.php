@@ -48,48 +48,75 @@
         </form>
         </a>
         <div class="main-menu">
-            <ul>
-                <li>
-                    <a href="home.php">
-                        <span class="menu-icon">
-                            <i class="fa fa-desktop fa-lg"></i>
-                        </span>
-                        <span class="text">
-                            Dashboard
-                        </span>
-                        <span class="menu-hover"></span>
-                    </a>
-                </li>
+        <ul>
+					<li>
+						<a href="home.php">
+							<span class="menu-icon">
+								<i class="fa fa-dashboard fa-lg"></i>
+							</span>
+							<span class="text">
+								Dashboard
+							</span>
+							<span class="menu-hover"></span>
+						</a>
+					</li>
 
-                <li class="openable open">
-                    <a href="add-customer.php">
-                        <span class="menu-icon">
-                            <i class="fa fa-user fa-lg"></i>
-                        </span>
-                        <span class="text">
-                            Customer
-                        </span>
-                        <span class="menu-hover"></span>
-                    </a>
-                    <ul class="submenu">
-                        <li><a href="add-customer.php"><span class="submenu-label"><i class="fa fa-plus fa-lg"></i> Add Customer</span></a></li>
-                        <li><a href="view-customer.php"><span class="submenu-label"><i class="fa fa-eye fa-lg"></i> View Customer</span></a></li>
-                    </ul>
-                </li>
+               
 
-                <li>
-                    <a href="payments.php">
-                        <span class="menu-icon">
-                            <i class="fa fa-credit-card fa-lg"></i>
-                        </span>
-                        <span class="text">
-                        payments
-                        </span>
-                        <span class="menu-hover"></span>
-                    </a>
-                </li>
+               <!-- customer tab -->
+					<!-- <li class="openable open">
+						<a href="customers.php">
+							<span class="menu-icon">
+								<i class="fa fa-file-text fa-lg"></i>
+							</span>
+							<span class="text">
+								Customers
+							</span>
+							<span class="menu-hover"></span>
+						</a>
+						<ul class="submenu">
+							<li><a href="customers.php"><span class="submenu-label"><i class="fa fa-plus"></i> Add Customer</span></a></li>
+							<li><a href="view-customers.php"><span class="submenu-label"><i class="fa fa-eye"></i> View Customers</span></a></li>
+						</ul>
+					</li> -->
+					
+               <!-- product tab -->
+					<li class="openable open">
+						<a href="add-customer.php">
+							<span class="menu-icon">
+								<i class="fa fa-user fa-lg"></i>
+							</span>
+							<span class="text">
+								Customer
+							</span>
+							<span class="menu-hover"></span>
+						</a>
+						<ul class="submenu">
+							<li><a href="add-customer.php"><span class="submenu-label"><i class="fa fa-plus"></i> Add Customer</span></a></li>
+							<li><a href="view-customer.php"><span class="submenu-label"><i class="fa fa-eye"></i> View Customer</span></a></li>
+						</ul>
+					</li>
 
-            </ul>
+				
+
+                 
+
+                
+
+                  <!-- report tab -->
+					<li class="openable open">
+						<a href="payments.php">
+							<span class="menu-icon">
+								<i class="fa fa-money fa-lg"></i>
+							</span>
+							<span class="text">
+								Payment
+							</span>
+							<span class="menu-hover"></span>
+						</a>
+						
+					</li>
+				</ul>
 
             <div class="alert alert-info">
                 Welcome to Perfect Admin. Do not forget to check all my pages.
