@@ -5,8 +5,9 @@
 
 <head>
     <title>View Customer</title>
-    <!-- Datatable -->
-    <link href="css/jquery.dataTables_themeroller.css" rel="stylesheet">
+ <!-- Datatable -->
+ <link href="css/jquery.dataTables_themeroller.css" rel="stylesheet">
+
 
     <!-- Including links from include folders -->
     <?php include("./include/linked-files.html"); ?>
@@ -149,29 +150,28 @@
 <!-- Datatable -->
 <script src='js/jquery.dataTables.min.js'></script>
 <script>
-    $(function() {
-        $('#dataTable').dataTable({
-            "bJQueryUI": true,
-            "sPaginationType": "full_numbers"
-        });
+   $(function() {
+		$('#dataTable').dataTable({
+			"bJQueryUI": true,
+			"sPaginationType": "full_numbers"
+		});
 
-        $('#chk-all').click(function() {
-            if ($(this).is(':checked')) {
-                $('#responsiveTable').find('.chk-row').each(function() {
-                    $(this).prop('checked', true);
-                    $(this).parent().parent().parent().addClass('selected');
-                });
-            } else {
-                $('#responsiveTable').find('.chk-row').each(function() {
-                    $(this).prop('checked', false);
-                    $(this).parent().parent().parent().removeClass('selected');
-                });
-            }
-        });
-    });
+		$('#chk-all').click(function() {
+			if ($(this).is(':checked')) {
+				$('#responsiveTable').find('.chk-row').each(function() {
+					$(this).prop('checked', true);
+					$(this).parent().parent().parent().addClass('selected');
+				});
+			} else {
+				$('#responsiveTable').find('.chk-row').each(function() {
+					$(this).prop('checked', false);
+					$(this).parent().parent().parent().removeClass('selected');
+				});
+			}
+		});
+	});
 </script>
 
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script>
     // Function to fade out the session alert after 3 seconds
     function fadeOutSessionAlert() {

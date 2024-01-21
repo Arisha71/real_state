@@ -163,41 +163,31 @@
     <?php include("./include/footer.html"); ?>
     <a href="blank.html" id="scroll-to-top" class="hidden-print"><i class="fa fa-chevron-up"></i></a>
 </body>
-
+<!-- Datatable -->
+<script src='js/jquery.dataTables.min.js'></script>
 </html>
  <script>
-    function decrementAmount() {
-      // Get paid amount, remaining amount, and payment amount
-      var paidAmountElement = document.getElementById("paidAmount");
-      var remainingAmountElement = document.getElementById("remainingAmount");
-      var paymentAmountElement = document.getElementById("paymentAmount");
+  function calculateRemainingBalance(currentBalance, paidAmount) {
+  if (typeof currentBalance !== 'number' || typeof paidAmount !== 'number') {
+    throw new Error('Both currentBalance and paidAmount must be numbers');
+  }
 
-      var paidAmount = parseFloat(paidAmountElement.innerText);
-      var remainingAmount = parseFloat(remainingAmountElement.innerText);
-      var paymentAmount = parseFloat(paymentAmountElement.value);
+  if (paidAmount < 0) {
+    throw new Error('Paid amount cannot be negative');
+  }
 
-      // Check if payment amount is valid
-      if (isNaN(paymentAmount) || paymentAmount <= 0) {
-        alert("Please enter a valid payment amount.");
-        return;
-      }
+  if (paidAmount > currentBalance) {
+    throw new Error('Paid amount cannot be greater than the current balance');
+  }
 
-      // Check if remaining amount is sufficient
-      if (paymentAmount > remainingAmount) {
-        alert("Payment amount exceeds remaining amount.");
-        return;
-      }
+  const remainingBalance = currentBalance - paidAmount;
+  return remainingBalance;
+}
 
-      // Increment the paid amount and decrement the remaining amount
-      var newPaidAmount = paidAmount + paymentAmount;
-      var newRemainingAmount = remainingAmount - paymentAmount;
-
-      paidAmountElement.innerText = newPaidAmount;
-      remainingAmountElement.innerText = newRemainingAmount;
-
-      // You can perform additional actions here, such as updating a database or displaying a success message.
-      alert("Payment successful. Paid amount: " + newPaidAmount + ", Remaining amount: " + newRemainingAmount);
-    }
+// Example usage:
+const currentBalance = 1000;
+const paidAmount = 500;
+const remainingBalance = calculateRemainingBalance(currentBalance, paidAmount);
   </script>
 <!------------------------------- update customer query --------------------->
 

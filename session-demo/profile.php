@@ -6,7 +6,8 @@
 
 	<title>Admin Profile</title>
 	<?php include("./include/linked-files.html"); ?>
-	<!--================----==================-->
+	
+	<!--================--CSS--==================-->
 	<style>
 		.view-content {
 			display: flex;
